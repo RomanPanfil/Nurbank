@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=1024"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurbank</title>
+  <meta name="keywords" content="Nurbank" />
+  <meta name="description" content="Nurbank" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no" />
+
+  <style> 
+
+    @font-face {
+      font-family: 'Gilroy';
+      src: local('Gilroy'), local('Gilroy Regular'),
+        url('./fonts/gilroy/Gilroy-Regular.woff2') format('woff2'),
+        url('./fonts/gilroy/Gilroy-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Gilroy';
+      src: local('Gilroy Medium'),
+        url('./fonts/gilroy/Gilroy-Medium.woff2') format('woff2'),
+        url('./fonts/gilroy/Gilroy-Medium.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Gilroy';
+      src: local('Gilroy Bold'),
+        url('./fonts/gilroy/Gilroy-Bold.woff2') format('woff2'),
+        url('./fonts/gilroy/Gilroy-Bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Gilroy';
+      src: local('Gilroy Black'),
+        url('./fonts/gilroy/Gilroy-Black.woff2') format('woff2'),
+        url('./fonts/gilroy/Gilroy-Black.woff') format('woff');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.css">
+  <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header-wrapper">          
+          <a href="#" class="header-logo">
+            <img src="./images/logo.png" alt="nurbank" loading="lazy">
+          </a>
+          <a href="tel:2552" class="header-phone">
+            <img src="./images/phone.svg" alt="phone">
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">    
+      <div class="main-banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-nm-7">
+              <h1 class="h1 main-banner-title">
+                Залоговый кредит
+              </h1>
+              <div class="main-banner-image main-banner-image__mob">
+                <img src="./images/banner-image_mobile.png" loading="lazy">
+              </div>
+              <ul class="main-banner-list">
+                <li class="main-banner-list-item">
+                  удобные сроки кредитования <b  class="text-uppercase">до 120 мес.</b>
+                </li>
+                <li class="main-banner-list-item">
+                  <b class="text-uppercase">возможность рефинансирования</b> займа с добором
+                </li>
+                <li class="main-banner-list-item">
+                  возможность <b class="text-uppercase">привлечения созаемщика</b> в случае недостаточности доходов
+                </li>
+              </ul>
+              <a href="#" class="ui-btn request-btn">
+                подать заявку на кредит
+              </a>
+            </div>
+            <div class="col-nm-5">
+              <div class="main-banner-image main-banner-image__desk">
+                <img src="./images/banner-image.png" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="terms">
+        <div class="container">
+          <div class="terms-header">
+            <h2 class="h2 section-title">
+              Условия кредитования
+            </h2>
+            <div class="ui-tabs">
+              <div class="ui-tab active" data-tab="tab-1">
+                С комиссиями
+              </div>
+              <div class="ui-tab" data-tab="tab-2">
+                Без комиссий
+              </div>
+            </div>
+          </div>
+          <div class="terms-table">
+            <table class="ui-tabs-wrapper active" id="tab-1">
+              <tr>
+                <td>
+                  Валюта кредитования
+                </td>
+                <td>
+                  тенге
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Сумма кредитования
+                </td>
+                <td>
+                  80% от рыночной стоимости залога, но не более 70 000 000 тенге
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Срок кредитования
+                </td>
+                <td>
+                  до 10 лет
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Залоговое обеспечение
+                </td>
+                <td>
+                  Жилая или коммерческая недвижимость
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Страхование
+                </td>
+                <td>
+                  Имущественное страхование залога обязательно
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Перечень документов оформления заявки<span class="color-red">*</span>
+                </td>
+                <td>
+                  Удостоверение личности<br>
+                  Документы на залог
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Ставка вознаграждения
+                </td>
+                <td>
+                  от 24% годовых**
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Комиссия за организацию займа
+                </td>
+                <td>
+                  2% от суммы кредита + 10 000 тенге
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Комиссия за рассмотрение заявления и документов на получение займа
+                </td>
+                <td>
+                  0 тенге
+                </td>
+              </tr>
+            </table>
+            <table class="ui-tabs-wrapper" id="tab-2">
+              <tr>
+                <td>
+                  Валюта кредитования
+                </td>
+                <td>
+                  тенге
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Сумма кредитования
+                </td>
+                <td>
+                  80% от рыночной стоимости залога, но не более 70 000 000 тенге
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Срок кредитования
+                </td>
+                <td>
+                  до 10 лет
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Залоговое обеспечение
+                </td>
+                <td>
+                  Жилая или коммерческая недвижимость
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Страхование
+                </td>
+                <td>
+                  Имущественное страхование залога обязательно
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Перечень документов оформления заявки<span class="color-red">*</span>
+                </td>
+                <td>
+                  Удостоверение личности<br>
+                  Документы на залог
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Ставка вознаграждения
+                </td>
+                <td>
+                  от 29% годовых***
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Комиссия за организацию займа
+                </td>
+                <td>
+                  0 тенге
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Комиссия за рассмотрение заявления и документов на получение займа
+                </td>
+                <td>
+                  0 тенге
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="terms-prompt">
+            <span class="color-red">*</span>Банк вправе запросить дополнительные документы
+          </div>
+        </div>
+      </div>
+
+      <div class="description">
+        <div class="container">
+          <a href="#" class="ui-btn request-btn hidden-desktop">
+            подать заявку на кредит
+          </a>
+          <div class="description-wrapper">
+            <div class="description-text">
+              <h2 class="section-title description-title">
+                Что такое Залоговый кредит
+              </h2>
+              <p>
+                Ищите способ получить залоговый кредит на крупную сумму? Рекомендуем обратиться в Nurbank и оформить кредит под залог недвижимости!
+              </p>
+              <p>
+                Кредит под залог недвижимости – это классический и очень распространённый вариант займа крупных сумм денег для людей,
+                которые могут оформить своё жильё в качестве залогового обязательства.  
+              </p>
+              <p>
+                Недвижимое имущество является достаточно дорогостоящим активом и зачастую оно не приносит вам никакого дохода.
+                Однако в ситуациях, когда вам нужны деньги для каких-то серьёзных покупок, мы советуем использовать своё
+                жильё для обеспечения залогового кредита.
+              </p>
+              <a href="#" class="ui-btn ui-btn-rounded">
+                Читать подробнее
+                <svg class="ui-btn-icon">
+                  <use xlink:href="svg/svg/symbols.svg#shape" />
+                </svg>
+              </a>
+            </div>
+            <div class="description-picture">
+              <img src="./images/wooman.png" srcset="./images/wooman@2x.png 2x" alt="wooman" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="application">
+        <div class="container">
+          <h2 class="section-title application-title">
+            Заявка на консультацию по кредиту
+          </h2>
+          <form class="application-form">
+            <div class="row">
+              <div class="col-lg-4 col-sm-6">
+                <div class="ui-field">
+                  <label class="ui-label" for="name">
+                    ИМЯ:<span class="ui-label-required">*</span>
+                  </label>
+                  <input type="text" class="ui-input" name="name" id="name">
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <div class="ui-field">
+                  <label class="ui-label" for="city">
+                    ГОРОД:
+                  </label>
+                  <input type="text" class="ui-input" name="city" id="city">
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <div class="ui-field">
+                  <label class="ui-label" for="phone">
+                    ТЕЛЕФОН:<span class="ui-label-required">*</span>
+                  </label>
+                  <input type="text" class="ui-input ux-phonemask" name="phone" id="phone">
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <div class="ui-field">
+                  <label class="ui-label" for="iin">
+                    ИИН:
+                  </label>
+                  <input type="text" class="ui-input" name="iin" id="iin">
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <div class="ui-field">
+                  <label class="ui-label" for="type">
+                    ВИД КРЕДИТА:
+                  </label>
+                  <select name="type" id="type" class="ui-select">
+                    <option disabled selected>
+                      Выберите тип кредита
+                    </option>
+                    <option value="1">
+                      Нужна консультация
+                    </option>
+                    <option value="2">
+                      Залоговый кредит
+                    </option>
+                    <option value="3">
+                      Беззалоговый кредит
+                    </option>
+                    <option value="4">
+                      Рефинансирование
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-2 col-sm-3 col-us-6">
+                <div class="ui-field">
+                  <label class="ui-label" for="captcha">
+                    капча:<span class="ui-label-required">*</span>
+                  </label>
+                  <input type="text" class="ui-input" name="captcha" id="captcha">
+                </div>
+              </div>
+              <div class="col-lg-2 col-sm-3 col-us-6 flex valign-end ">
+                <div class="ui-captcha">
+                                  
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="ui-field__agree">
+                  <input type="checkbox" class="ui-checkbox" name="agree" id="agree">
+                  <label for="agree" class="ui-label-agree">Согласен на обработку персональных данных</label>
+                </div>                
+              </div>
+              <div class="col-lg-4 col-nm-6">
+                <button class="ui-btn ui-btn-block">
+                  подать заявку на кредит
+                </button>
+              </div>
+            </div>            
+          </form>
+
+          <script>
+            $(document).ready(function () {
+              $.validator.addMethod("noDigits", function(value, element) {
+                return this.optional(element) || !/\d/.test(value);
+              }, 'В этом поле нельзя вводить цифры');
+      
+              $.validator.addMethod("phone", function (value, element) {
+              if (value.startsWith('+375')) {
+                return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){12}(\s*)?$/i.test(value);
+              } else if (value.startsWith('+7')) {
+                return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11}(\s*)?$/i.test(value);
+              } else {
+                return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?$/i.test(value);
+              }
+            }, "Введите полный номер");   
+      
+              $.validator.messages.required = 'Пожалуйста, заполните это поле';
+      
+              $(".application-form").validate({
+                submitHandler: function(form, event) {
+                  event.preventDefault();
+                  form.reset();
+                },
+                rules: {               
+                  name: { noDigits: true, required: true },
+                  phone: { phone: true, required: true },
+                  captcha: { required: true },
+                  agree: { required: true }            
+                },
+              });             
+            });     
+              
+          </script>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">         
+          <a href="#" class="footer-logo">
+            <img src="./images/logo.png" alt="nurbank" loading="lazy">
+          </a>
+          <div class="footer-socials">
+            <a href="#" class="footer-socials-item">
+              <div class="footer-socials-icon">
+                <svg class="icon">
+                  <use xlink:href="svg/svg/symbols.svg#inst" />
+                </svg>
+              </div>
+              <div class="footer-socials-text">
+                <svg class="footer-socials-at">
+                  <use xlink:href="svg/svg/symbols.svg#at" />
+                </svg>
+                <span>nurbank</span>
+              </div>              
+            </a>
+            <a href="#" class="footer-socials-item">
+              <div class="footer-socials-icon">
+                <svg class="icon">
+                  <use xlink:href="svg/svg/symbols.svg#fb" />
+                </svg>
+              </div>
+              JSCNurbank
+            </a>
+            <a href="#" class="footer-socials-item">
+              <div class="footer-socials-icon">
+                <svg class="icon">
+                  <use xlink:href="svg/svg/symbols.svg#int" />
+                </svg>
+              </div>
+              www.nurbank.kz
+            </a>
+          </div>
+          <a href="tel:2552" class="footer-phone">
+            <img src="./images/phone.svg" alt="phone">
+          </a>
+        </div>        
+      </div>
+    </footer>
+
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="./scripts/scripts.js"></script>
+</body>
+
+</html>

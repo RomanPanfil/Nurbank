@@ -1,0 +1,73 @@
+// Colors & BG's ---
+$bgc: #fff;
+$bg: #F0F5FF;
+$bg_banner: #FFDA00;
+$bg_input: #E5EEFF;
+$font: #002364;
+$font_white: #fff;
+$font_light: #506998;
+$font_extra_light: #C5D5F5;
+$font_prompt: #7C96C5;
+$button: #0077C8;
+$button_hover: #0061A3;
+
+$error: #FF0000;
+
+$primary: #0077C8;
+$primary_hover: lighten($primary, 10%);
+$primary_active: lighten($primary, 16%);
+
+
+$link: $primary;
+$link_hover: $primary_hover;
+$link_active: $primary_active;
+$link_border: $primary_hover;
+$link_border_hover: transparent;
+
+$border: #C5D5F5;
+$border_tab: #FFCC00;
+
+// Layouts
+$inner: 1420px;
+$gutter: 30px;
+$col_gutter: 25px;
+$block_margin: 0 0 25px;
+
+
+// Grid
+$breakpoints: ("xl":1440,"lg":1260,"md":1024, "nm":992,"sm":768,"xs":599,"us":360);
+
+
+// Typography ---
+$fontsize: 20;
+$weight: 400;
+$basefont: 'Gilroy';
+$lh: 1.4;
+$th: 1.4;
+$paragraph_margin: 0px 0px 28px;
+
+// headings
+$headings_font_family: $basefont;
+$headings_margin: 40px 0px 40px;
+$headings_font_weight: 500;
+$headings_text_transform: none;
+$h1: 62;
+$h2: 48;
+$h3: 40;
+$h4: 30;
+$h5: 24;
+$h6: $fontsize;
+
+$block_heading_font_size: 24;
+$block_heading_font_weight: 700;
+
+
+@mixin fz($f_size) {
+	font-size: $f_size + px;
+	font-size: $f_size/16 + rem;
+}
+
+@mixin ls($lsp) {
+	letter-spacing: $lsp + px;
+	letter-spacing: $lsp/16 + rem;
+}

@@ -1,0 +1,44 @@
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @media (max-width: 768px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    @media (max-width: 480px) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &-logo {
+        max-width: 356px;
+        max-height: 38px;
+
+        @media (max-width: 1280px) {
+            max-height: 32px;
+            max-width: 320px;
+            object-fit: contain;
+        }
+    }
+
+    &-phone {
+        max-width: 147px;
+        max-height: 65px;
+
+        @media (max-width: 1280px) {
+            max-height: 52px;
+            max-width: 120px;
+            object-fit: contain;
+        }
+    }
+}
