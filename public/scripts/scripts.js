@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // переключение табов
   (function() {
-    // if (!document.querySelector('.ui-tabs button') || !document.querySelector('.ui-tabs-wrapper')) return
+    if (!document.querySelector('.ui-tab') || !document.querySelector('.ui-tabs-wrapper')) return
 
     const tabs = document.querySelectorAll('.ui-tab');
     const tabsPanel = document.querySelectorAll('.ui-tabs-wrapper');
