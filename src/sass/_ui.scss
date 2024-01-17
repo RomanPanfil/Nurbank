@@ -266,6 +266,7 @@ table {
 
 .ui-btn {
 	@include ls(1.32);
+	font-weight: 500;
 	line-height: normal;
 	display: inline-block;
 	vertical-align: middle;	
@@ -293,6 +294,10 @@ table {
 		padding-bottom: 24px;
 		padding-left: 36px;
 		padding-right: 36px;
+	}
+
+	@media(max-width: 992px) {
+		font-weight: 600;
 	}
 
 	@media(max-width: 480px) {
@@ -506,12 +511,42 @@ table {
 		padding-bottom: 54px;
 		background-color: #fff;
 
+		@media(max-width: 1280px) {
+			padding-top: 34px;
+			padding-bottom: 34px;
+		}
+
+		@media(max-width: 992px) {
+			padding-top: 32px;
+			padding-bottom: 32px;
+		}
+
+		@media(max-width: 480px) {
+			padding: 26px 20px;
+		}
+
 		li {
 			cursor: pointer;
 			transition: color 0.3s;
 
 			&:not(:last-child, .disabled) {
 				margin-bottom: 28px;
+
+				@media(max-width: 1280px) {
+					margin-bottom: 20px;
+				}
+
+				@media(max-width: 992px) {
+					margin-bottom: 18px;
+				}
+				
+				@media(max-width: 768px) {
+					margin-bottom: 16px;
+				}
+
+				@media(max-width: 480px) {
+					margin-bottom: 14px;
+				}
 			}
 			
 			&.disabled {
