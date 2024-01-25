@@ -3155,6 +3155,96 @@ table {
   }
 }
 
+.mfp-wrap {
+  overflow: auto !important;
+}
+
+.popup-success {
+  position: relative;
+  background-color: #fff;
+  max-width: 572px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 72px 60px 96px 60px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #C5D5F5;
+}
+@media (max-width: 1280px) {
+  .popup-success {
+    padding: 52px 40px 76px 40px;
+    max-width: 500px;
+  }
+}
+@media (max-width: 1024px) {
+  .popup-success {
+    padding: 42px 30px 66px 30px;
+    max-width: 440px;
+  }
+}
+@media (max-width: 480px) {
+  .popup-success {
+    padding: 32px 20px 56px 20px;
+  }
+}
+
+.success-title {
+  margin-bottom: 34px;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 1280px) {
+  .success-title {
+    font-size: 22px;
+    font-size: 1.375rem;
+    margin-bottom: 28px;
+  }
+}
+@media (max-width: 1024px) {
+  .success-title {
+    font-size: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .success-title {
+    font-size: 18px;
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+  }
+}
+.success-message {
+  font-size: 18px;
+  font-size: 1.125rem;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+}
+@media (max-width: 1280px) {
+  .success-message {
+    font-size: 17px;
+    font-size: 1.0625rem;
+  }
+}
+@media (max-width: 1024px) {
+  .success-message {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .success-message {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+
+button.mfp-close {
+  display: none;
+}
+
 .footer {
   padding-top: 40px;
   padding-bottom: 40px;
