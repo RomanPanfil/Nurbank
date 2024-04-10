@@ -12,6 +12,7 @@ $button: #0077C8;
 $button_hover: #0061A3;
 
 $error: #FF0000;
+$warning: #EA5F5F;
 
 $primary: #0077C8;
 $primary_hover: lighten($primary, 10%);
@@ -41,7 +42,7 @@ $breakpoints: ("xl":1440,"lg":1260,"md":1024, "nm":992,"sm":768,"xs":599,"us":36
 // Typography ---
 $fontsize: 20;
 $weight: 400;
-$basefont: 'Gilroy';
+$basefont: 'Segoe UI';
 $lh: 1.4;
 $th: 1.4;
 $paragraph_margin: 0px 0px 28px;

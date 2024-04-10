@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=1024"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurbank</title>
+    <meta name="keywords" content="Nurbank">
+    <meta name="description" content="Nurbank">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <style> 
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- <meta name="viewport" content="width=1024"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nurbank</title>
-  <meta name="keywords" content="Nurbank" />
-  <meta name="description" content="Nurbank" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="format-detection" content="telephone=no" />
-
-  <style> 
-
-    @font-face {
+    /* @font-face {
       font-family: 'Gilroy';
       src: local('Gilroy'), local('Gilroy Regular'),
         url('./fonts/gilroy/Gilroy-Regular.woff2') format('woff2'),
@@ -62,466 +60,1929 @@
       font-weight: 900;
       font-style: normal;
       font-display: swap;
+    } */
+
+     @font-face {
+      font-family: 'Segoe UI';
+      src: local('Segoe UI'), local('Segoe UI Regular'),
+        url('./fonts/segoe/SegoeUI.woff2') format('woff2'),
+        url('./fonts/segoe/SegoeUI.woff2') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
     }
 
-  </style>
+    @font-face {
+      font-family: 'Segoe UI';
+      src: local('Segoe UI Semibold'),
+        url('./fonts/segoe/SegoeUI-SemiBold.woff2') format('woff2'),
+        url('./fonts/segoe/SegoeUI-SemiBold.woff') format('woff');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-  integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
-
-  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-</head>
-
-<body>
-  <div class="wrapper">
-    <header class="header">
-      <div class="container">
-        <div class="header-wrapper">          
-          <a href="#" class="header-logo">
-            <img src="./images/logo.png" alt="nurbank" loading="lazy">
-          </a>
-          <a href="tel:2552" class="header-phone">
-            <img src="./images/phone.svg" alt="phone">
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <main class="main">    
-      <div class="main-banner">
+    @font-face {
+      font-family: 'Segoe UI';
+      src: local('Segoe UI Bold'),
+        url('./fonts/segoe/SegoeUI-Bold.woff2') format('woff2'),
+        url('./fonts/segoe/SegoeUI-Bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+      integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+    <link
+      rel="stylesheet"
+      href="./css/style.css"
+      type="text/css"
+      media="all"
+    >
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="/fonts/segoe/stylesheet.css?v=1.3"
+      type="text/css"
+      media="all"
+    >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
         <div class="container">
-          <div class="row">
-            <div class="col-nm-7">
-              <h1 class="h1 main-banner-title">
-                Залоговый кредит
-              </h1>
-              <div class="main-banner-image main-banner-image__mob">
-                <img src="./images/banner-image_mobile.png" loading="lazy">
+          <div class="header-wrapper">
+            <a href="#" class="header-logo">
+              <img src="./images/logo.png" alt="nurbank" loading="lazy">
+            </a>
+            <div class="right">
+              <a href="tel:2552" class="header-phone">
+                <img src="./images/phone.svg" alt="phone">
+              </a>
+              <div class="lang">
+                <div class="active">
+                  <a href="/">RU</a>
+                </div>
+                <div class="sub">
+                  <a href="/kz/">KZ</a>
+                </div>
               </div>
-              <ul class="main-banner-list">
-                <li class="main-banner-list-item">
-                  удобные сроки кредитования <b  class="text-uppercase">до 120 мес.</b>
-                </li>
-                <li class="main-banner-list-item">
-                  <b class="text-uppercase">возможность рефинансирования</b> займа с добором
-                </li>
-                <li class="main-banner-list-item">
-                  возможность <b class="text-uppercase">привлечения созаемщика</b> в случае недостаточности доходов
-                </li>
-              </ul>
-              <a href="#" class="ui-btn request-btn">
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <!-- баннер для залогового кредита начало -->
+        <div class="main-banner tab-content" data-content="zalog">
+          <div class="container">
+            <div class="row">
+              <div class="col-nm-7">
+                <h1 class="h1 main-banner-title">
+                  Залоговый кредит
+                </h1>
+                <div class="main-banner-image main-banner-image__mob">
+                  <img src="./images/banner-image_mobile.png" loading="lazy">
+                </div>
+                <ul class="main-banner-list">
+                  <li class="main-banner-list-item">
+                    удобные сроки кредитования
+                    <b class="text-uppercase">до 120 мес.</b>
+                  </li>
+                  <li class="main-banner-list-item">
+                    <b class="text-uppercase">возможность рефинансирования</b>
+                    займа с добором
+                  </li>
+                  <li class="main-banner-list-item">
+                    возможность
+                    <b class="text-uppercase">привлечения созаемщика</b>
+                    в случае недостаточности доходов
+                  </li>
+                </ul>
+                <a href="#" class="ui-btn request-btn">
+                  подать заявку на кредит
+                </a>
+              </div>
+              <div class="col-nm-5">
+                <div class="main-banner-image main-banner-image__desk">
+                  <img src="./images/banner-image.png" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- баннер для залогового кредита конец -->
+        <!-- баннер для беззалогового кредита начало -->
+        <div class="main-banner tab-content" data-content="bezzalogov">
+          <div class="container">
+            <div class="row">
+              <div class="col-nm-7">
+                <h1 class="h1 main-banner-title">
+                  Беззалоговый кредит
+                </h1>
+                <div class="main-banner-image main-banner-image__mob">
+                  <img src="./images/banner-image_mobile.png" loading="lazy">
+                </div>
+                <ul class="main-banner-list">
+                  <li class="main-banner-list-item">
+                    Забронируйте лучшие условия
+                  </li>
+                  <li class="main-banner-list-item">
+                    Максимальная сумма
+                    <b class="text-uppercase">7 000 000 тенге</b>
+                    до 60 месяцев.
+                  </li>
+                  <li class="main-banner-list-item">
+                    Без залога и на любые цели.
+                  </li>
+                </ul>
+                <a href="#" class="ui-btn request-btn">
+                  подать заявку на кредит
+                </a>
+              </div>
+              <div class="col-nm-5">
+                <div class="main-banner-image main-banner-image__desk">
+                  <img src="./images/banner-image.png" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- баннер для беззалогового кредита конец -->
+        <!-- баннер для рефинансирования начало -->
+        <div class="main-banner tab-content active" data-content="refinance">
+          <div class="container">
+            <div class="row">
+              <div class="col-nm-7">
+                <h1 class="h1 main-banner-title">
+                  Внешнее рефинансирование
+                </h1>
+                <div class="main-banner-image main-banner-image__mob">
+                  <img src="./images/banner-image_mobile.png" loading="lazy">
+                </div>
+                <ul class="main-banner-list">
+                  <li class="main-banner-list-item">
+                    Берите больше! Платите меньше!
+                  </li>
+                  <li class="main-banner-list-item">
+                    <b class="text-uppercase">Возможность уменьшить кредитную нагрузку</b>
+                    за счет более выгодных условий кредитования и получить дополнительную сумму займа.
+                  </li>
+                  <li class="main-banner-list-item">
+                    Максимальная сумма
+                    <b class="text-uppercase">7 000 000 тенге</b>
+                    до 60 месяцев.
+                  </li>
+                </ul>
+                <a href="#" class="ui-btn request-btn">
+                  подать заявку на кредит
+                </a>
+              </div>
+              <div class="col-nm-5">
+                <div class="main-banner-image main-banner-image__desk">
+                  <img src="./images/banner-image.png" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- баннер для рефинансирования конец -->
+        <div class="container">
+          <div class="content-tabs">
+            <div class="content-tab" data-tab="zalog">
+              залоговый кредит
+            </div>
+            <div class="content-tab" data-tab="bezzalogov">
+              беззалоговый кредит
+            </div>
+            <div class="content-tab active" data-tab="refinance">
+              рефинансирование
+            </div>
+          </div>
+        </div>
+        <!-- основной контент для залогового кредита начало -->
+        <div class="tab-content" data-content="zalog">
+          <div class="terms">
+            <div class="container">
+              <div class="terms-header">
+                <h2 class="h2 section-title">
+                  Условия кредитования
+                </h2>
+                <div class="ui-tabs">
+                  <div class="ui-tab" data-tab="tab-1">
+                    С комиссиями
+                  </div>
+                  <div class="ui-tab active" data-tab="tab-2">
+                    Без комиссий
+                  </div>
+                </div>
+              </div>
+              <div class="terms-table2">
+                <div class="ui-tabs-wrapper" id="tab-1">
+                  <div class="terms-table">
+                    <table>
+                      <tr>
+                        <td>
+                          Валюта кредитования
+                        </td>
+                        <td>
+                          тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Сумма кредитования
+                        </td>
+                        <td>
+                          до 80% от стоимости залога, но не более 70 000 000 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Срок кредитования
+                        </td>
+                        <td>
+                          до 10 лет
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Залоговое обеспечение
+                        </td>
+                        <td>
+                          Жилая или коммерческая недвижимость
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Страхование
+                        </td>
+                        <td>
+                          Имущественное страхование залога обязательно
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Перечень документов оформления заявки
+                          <span class="color-red">*</span>
+                        </td>
+                        <td>
+                          Удостоверение личности
+                          <br>
+                          Документы на залог
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Ставка вознаграждения
+                        </td>
+                        <td>
+                          от 21.6% годовых (ГЭСВ от 23,88%)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Комиссия за организацию займа
+                        </td>
+                        <td>
+                          2% от суммы кредита + 10 000 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Комиссия за рассмотрение заявления и документов на получение займа
+                        </td>
+                        <td>
+                          0 тенге
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="terms-prompt">
+                    <span class="color-red">*</span>
+                    Банк вправе запросить дополнительные документы
+                  </div>
+                </div>
+                <div class="ui-tabs-wrapper active" id="tab-2">
+                  <div class="terms-table">
+                    <table>
+                      <tr>
+                        <td>
+                          Валюта кредитования
+                        </td>
+                        <td>
+                          тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Сумма кредитования
+                        </td>
+                        <td>
+                          до 80% от стоимости залога, но не более 70 000 000 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Срок кредитования
+                        </td>
+                        <td>
+                          до 10 лет
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Перечень документов оформления заявки
+                          <span class="color-red">*</span>
+                        </td>
+                        <td>
+                          Удостоверение личности
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Срок рассмотрения заявки
+                        </td>
+                        <td>
+                          От 15 минут
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Ставка вознаграждения
+                        </td>
+                        <td>
+                          от 21,8% годовых (ГЭСВ от 24,15%)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Комиссия за организацию займа
+                        </td>
+                        <td>
+                          0 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Комиссия за рассмотрение заявления и документов на получение займа
+                        </td>
+                        <td>
+                          0 тенге
+                        </td>
+                      </tr>
+                    </table>
+                    <table>
+                      <thead>
+                        <th colspan="2">Требования к заемщикам</th>
+                      </thead>
+                      <tr>
+                        <td>Целевая группа</td>
+                        <td>Гражданин РК</td>
+                      </tr>
+                      <tr>
+                        <td>Возраст на момент предоставления кредита</td>
+                        <td>от 21 года до достижения пенсионного возраста</td>
+                      </tr>
+                      <tr>
+                        <td>Общий стаж работы заемщика</td>
+                        <td>не менее 6 месяцев</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="terms-prompt">
+                    Примечание: ставки вознаграждения утверждены решением Комитета по управлению активами и пассивами (протокол №29-5 от 23.02.2024 г.)
+                  </div>
+                  <div class="terms-prompt">
+                    <span class="color-red">*</span>
+                    Банк вправе запросить дополнительные документы
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calculator-kredit" id="form1">
+            <div class="container">
+              <h2 class="section-title application-title">
+                кредитный калькулятор
+              </h2>
+              <div class="row">
+                <div class="col-lg-8 col-md-7">
+                  <form>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-6 col-md-6 d-none">
+                        <span class="span-t">Вид кредита</span>
+                        <select name="city-service" class="form-control city-service" id="city-service">
+                          <option value="zalog" selected>Залоговый</option>
+                          <option value="bezzalogov">Беззалоговый</option>
+                          <option value="refinance">Внешнее рефинансирование</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="ui-field">
+                          <label class="ui-label" for="name">
+                            Желаемая сумма кредита:
+                          </label>
+                          <div class="ui-input-wrapper">
+                            <input
+                              type="text"
+                              class="ui-input ui-input__excess data-sum"
+                              name="name"
+                              value="600000"
+                              data-value="sum"
+                              id="data-sum"
+                            >
+                            <span class="ui-field-excess">тенге</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="ui-field">
+                          <label class="ui-label" for="name">
+                            Срок кредита:
+                          </label>
+                          <div class="ui-input-wrapper">
+                            <input
+                              type="text"
+                              class="ui-input ui-input__excess"
+                              name="name"
+                              value="6"
+                              data-value="sum"
+                              id="data-period"
+                            >
+                            <span class="ui-field-excess">месяцев</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="ui-field__agree">
+                          <input
+                            type="checkbox"
+                            class="ui-checkbox"
+                            name="name"
+                            id="credit-commission"
+                            value="1"
+                            checked=""
+                          >
+                          <label for="credit-commission" class="ui-label-agree">С комиссией</label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <p class="calculator-kredit-description">
+                    Расчет ежемесячного платежа является предварительным и может отличаться от размера платежа на дату консультации/фактической выдачи займа.
+                    Информация предоставлена в ознакомительных целях, за более подробной информацией необходимо в филиал или ближайшее отделение Банка.
+                    Список отделений указан
+                    <a href="#">здесь</a>
+                  </p>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                  <div class="calculator-request">
+                    <div class="calculator-request-title">
+                      предварительный расчет
+                    </div>
+                    <div class="calculator-request-item">
+                      <div class="calculator-request-label">
+                        Сумма заявки
+                      </div>
+                      <div class="calculator-request-info">
+                        <div class="summa calculator-request-num result-mine" id="result-mine"></div>
+                        <div class="calculator-request-warnings">
+                          <div class="calculator-request-warning" id="result-min"></div>
+                          <div class="calculator-request-warning" id="result-max"></div>
+                          <div class="calculator-request-no-valid" id="result-sum-no-valid"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calculator-request-item">
+                      <div class="calculator-request-label pay">
+                        Ежемесячный платеж
+                      </div>
+                      <div class="calculator-request-info">
+                        <div class="pay-s calculator-request-num" id="result-total"></div>
+                        <div class="calculator-request-warnings">
+                          <div class="calculator-request-warning" id="result-period-min"></div>
+                          <div class="calculator-request-warning" id="result-period-max"></div>
+                          <div class="calculator-request-no-valid" id="result-total-no-valid"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="ui-btn ui-btn-block request-btn">
+                      Оформить заявку
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="description">
+            <div class="container">
+              <!-- <a href="#" class="ui-btn request-btn hidden-desktop">
+                подать заявку на кредит
+              </a> -->
+              <div class="description-wrapper">
+                <div class="description-text">
+                  <h2 class="section-title description-title">
+                    Информация для заемщика
+                  </h2>
+                  <div class="description-text-main">
+                    <p>
+                      Уведомляем о том, что если заемщик является физическим лицом, то он вправе в течение тридцати календарных дней
+                      с даты наступления просрочки исполнения обязательства по договору банковского займа (далее - Договор) посетить
+                      Банк и (или) представить в письменной форме либо способом, предусмотренным Договором, заявление,
+                      содержащее сведения о причинах возникновения просрочки исполнения обязательства по Договору,
+                      доходах и других подтвержденных обстоятельствах (фактах), которые обуславливают его заявление о внесении
+                      изменений в условия Договора, в соответствии с пунктом 1-1 статьи 36 Закона Республики Казахстан «О банках
+                      и банковской деятельности в Республике Казахстан» (далее - Закон о банках).
+                    </p>
+                    <p>
+                      При этом в течение пятнадцати календарных дней после дня получения заявления заемщика - физического лица,
+                      предусмотренного пунктом 1-1 статьи 36 Закона о банках, Банк рассматривает предложенные заемщиком - физическим
+                      лицом изменения в условия Договора и в письменной форме либо способом, предусмотренным Договором, сообщает заемщику - физическому лицу о (об):
+                    </p>
+                    <ol>
+                      <li>
+                        согласии с предложенными изменениями в условия Договора;
+                      </li>
+                      <li>
+                        своих предложениях по изменению условий Договора;
+                      </li>
+                      <li>
+                        отказе в изменении условий Договора с указанием мотивированного обоснования причин такого отказа.
+                      </li>
+                    </ol>
+                    <p>
+                      В случае получения решения Банка об отказе в изменении условий Договора или при недостижении взаимоприемлемого решения
+                      об изменении условий Договора, заемщик - физическое лицо в течение 15 (пятнадцати) календарных дней с даты получения решения
+                      Банка вправе обратиться в Агентство Республики Казахстан по регулированию и развитию финансового рынка с одновременным уведомлением Банка.
+                    </p>
+                    <p>
+                      При неудовлетворении заемщиком требования Банка о необходимости внесения платежей по Договору, в том числе просроченной задолженности,
+                      в соответствии с пунктом 2 статьи 36 Закона о банках Банк вправе обратить взыскание в бесспорном порядке на деньги, в том числе путем
+                      предъявления платежного требования, имеющиеся на банковских счетах заемщика (в случае если такое взыскание оговорено в Договоре),
+                      с учетом ограничений, предусмотренных Законом о банках.
+                    </p>
+                    <p>
+                      В случаях неудовлетворения заемщиком требования Банка о необходимости внесения платежей по Договору, в том числе просроченной задолженности,
+                      а также нереализации заемщиком - физическим лицом прав, предусмотренных пунктом 1-1 статьи 36 Закона о банках, либо отсутствия согласия между
+                      заемщиком - физическим лицом и Банком по изменению условий Договора, в соответствии с пунктом 2-1 статьи 36 Закона о банках Банк вправе
+                      применить в отношении заемщика меры, предусмотренные законодательством Республики Казахстан и (или) Договором, включая, но не ограничиваясь,
+                      передать задолженность на досудебное взыскание и урегулирование коллекторскому агентству (в случае наличия такого права Банка в Договоре),
+                      уступить право (требование) по Договору лицу, указанному в пункте 4 статьи 36-1 Закона о банках, обратиться с иском в суд о взыскании суммы
+                      долга по Договору, а также обратить взыскание на заложенное имущество во внесудебном порядке, за исключением случаев, предусмотренных Законом
+                      Республики Казахстан «Об ипотеке недвижимого имущества», либо в судебном порядке.
+                    </p>
+                  </div>
+                  <button class="ui-btn ui-btn-rounded description-more">
+                    <span>Читать подробнее</span>
+                    <svg class="ui-btn-icon">
+                      <use xlink:href="svg/svg/symbols.svg#shape"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="description-picture">
+                  <img
+                    src="./images/wooman.png"
+                    srcset="./images/wooman@2x.png 2x"
+                    alt="wooman"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="application">
+            <div class="container">
+              <h2 class="section-title application-title">
+                Заявка на консультацию
+              </h2>
+              <form class="application-form" id="requestForm">
+                <div class="row">
+                  <div class="col-lg-4 col-sm-6">
+                    <div class="ui-field">
+                      <label class="ui-label" for="name">
+                        ИМЯ:
+                        <!-- <span class="ui-label-required">*</span> -->
+                      </label>
+                      <input
+                        type="text"
+                        class="ui-input"
+                        name="name"
+                        id="name"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                    <div class="ui-field">
+                      <label class="ui-label" for="iin">
+                        ИИН:
+                      </label>
+                      <input
+                        type="text"
+                        class="ui-input"
+                        name="iin"
+                        id="iin"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                    <div class="ui-field">
+                      <label class="ui-label" for="phone">
+                        ТЕЛЕФОН:
+                        <!-- <span class="ui-label-required">*</span> -->
+                      </label>
+                      <input
+                        type="text"
+                        class="ui-input ux-phonemask"
+                        name="phone"
+                        id="phone"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                    <div class="ui-field d-none">
+                      <label class="ui-label" for="type">
+                        ВИД КРЕДИТА:
+                      </label>
+                      <select name="type" id="type" class="ui-select">
+                        <option value="">
+                          Выберите тип кредита
+                        </option>
+                        <option value="Залоговый кредит" selected>
+                          Залоговый кредит
+                        </option>
+                        <option value="Беззалоговый кредит">
+                          Беззалоговый кредит
+                        </option>
+                        <option value="Рефинансирование">
+                          Рефинансирование
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="ui-field__agree">
+                      <input
+                        type="checkbox"
+                        class="ui-checkbox"
+                        name="agree"
+                        id="agree"
+                      >
+                      <label for="agree" class="ui-label-agree">Согласен на обработку персональных данных</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-nm-6">
+                    <button class="ui-btn ui-btn-block">
+                      подать заявку на кредит
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <script>
+              function refresh_c(){              
+                $("#captchaImg").attr("src","mail/captcha.php?r=" + Math.random());
+              }
+              $(document).ready(function () {
+                $.validator.addMethod("noDigits", function(value, element) {
+                  return this.optional(element) || !/\d/.test(value);
+                }, 'В этом поле нельзя вводить цифры');
+        
+                $.validator.addMethod("phone", function (value, element) {
+                if (value.startsWith('+375')) {
+                  return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){12}(\s*)?$/i.test(value);
+                } else if (value.startsWith('+7')) {
+                  return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11}(\s*)?$/i.test(value);
+                } else {
+                  return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?$/i.test(value);
+                }
+              }, "Введите полный номер");   
+        
+                $.validator.messages.required = 'Пожалуйста, заполните это поле';
+        
+                $(".application-form").validate({
+                  submitHandler: function(form, event) {
+            
+                    event.preventDefault();
+                    $.ajax({
+                      url:'/mail/oForm.php',
+                      data:$('form.application-form').serialize(),
+                      async:false,
+                      type:'POST',
+                      success:function(data){
+                        
+                        if(data == 'OK'){
+              dataLayer.push({'event': 'form_sendrequestForm'});
+                          $.magnificPopup.open({
+                          items: { src: '/popups/popup-success.html' },
+                          type: "ajax",
+                          overflowY: "scroll",
+                          removalDelay: 300,
+                          mainClass: 'my-mfp-zoom-in',
+                          ajax: {
+                            tError: "Error. Not valid url",
+                          },
+                          callbacks: {
+                            parseAjax: function () {
+                            
+                            }
+                          },				  						
+                          });
+                          setTimeout(() => {
+                            $('.mfp-close-btn-in .mfp-close').click();
+                          }, 5000);
+                          form.reset();
+                        
+                        }
+                        if(data == 'ERROR_CAPTCHA'){
+                          $('#captcha').addClass('error').after('<label id="captcha-error" class="error" for="captcha">Неверный проверочный код</label>');
+                        }
+                      }
+                    })
+                    
+                  },
+                  rules: {               
+                    name: { noDigits: true, required: true },
+                    phone: { phone: true, required: true },
+                    captcha: { required: true },
+                    agree: { required: true }            
+                  },
+                });             
+              });
+              </script>
+            </div>
+          </div>
+        </div>
+        <!-- основной контент для залогового кредита конец -->
+        <!-- основной контент для беззалогового кредита начало -->
+        <div class="tab-content" data-content="bezzalogov">
+          <div class="terms">
+            <div class="container">
+              <div class="terms-header">
+                <h2 class="h2 section-title">
+                  Условия кредитования
+                </h2>
+                <div class="ui-tabs">
+                  <div class="ui-tab" data-tab="tab-1">
+                    С комиссиями
+                  </div>
+                  <div class="ui-tab active" data-tab="tab-2">
+                    Без комиссий
+                  </div>
+                </div>
+              </div>
+              <div class="terms-table2">
+                <div class="ui-tabs-wrapper" id="tab-1">
+                  <div class="terms-table">
+                    <table>
+                      <tr>
+                        <td>
+                          Валюта кредитования
+                        </td>
+                        <td>
+                          тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Сумма кредитования
+                        </td>
+                        <td>
+                          от 150 000 до 7 000 000 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Срок кредитования
+                        </td>
+                        <td>
+                          от 12 до 60 месяцев
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Перечень документов оформления заявки
+                          <span class="color-red">*</span>
+                        </td>
+                        <td>
+                          Удостоверение личности
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Срок рассмотрения заявки
+                        </td>
+                        <td>
+                          От 15 минут
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Ставка вознаграждения
+                        </td>
+                        <td>
+                          от 21,8% годовых (ГЭСВ от 24,15%)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Комиссия за организацию займа
+                        </td>
+                        <td>
+                          6% от суммы кредита + 5 000 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Комиссия за рассмотрение заявления и документов на получение займа
+                        </td>
+                        <td>
+                          0 тенге
+                        </td>
+                      </tr>
+                    </table>
+                    <table>
+                      <thead>
+                        <th colspan="2">Требования к заемщикам</th>
+                      </thead>
+                      <tr>
+                        <td>Целевая группа</td>
+                        <td>Гражданин РК</td>
+                      </tr>
+                      <tr>
+                        <td>Возраст на момент предоставления кредита</td>
+                        <td>от 21 года до достижения пенсионного возраста</td>
+                      </tr>
+                      <tr>
+                        <td>Общий стаж работы заемщика</td>
+                        <td>не менее 6 месяцев</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="terms-prompt">
+                    Примечание: ставки вознаграждения утверждены решением Комитета по управлению активами и пассивами (протокол №29-5 от 23.02.2024 г.)
+                  </div>
+                  <div class="terms-prompt">
+                    <span class="color-red">*</span>
+                    Банк вправе запросить дополнительные документы
+                  </div>
+                </div>
+                <div class="ui-tabs-wrapper active" id="tab-2">
+                  <div class="terms-table">
+                    <table>
+                      <tr>
+                        <td>
+                          Валюта кредитования
+                        </td>
+                        <td>
+                          тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Сумма кредитования
+                        </td>
+                        <td>
+                          от 150 000 до 7 000 000 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Срок кредитования
+                        </td>
+                        <td>
+                          от 12 до 60 месяцев
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Перечень документов оформления заявки
+                          <span class="color-red">*</span>
+                        </td>
+                        <td>
+                          Удостоверение личности
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Срок рассмотрения заявки
+                        </td>
+                        <td>
+                          От 15 минут
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Ставка вознаграждения
+                        </td>
+                        <td>
+                          от 33% годовых (ГЭСВ от 38,3%%)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Комиссия за организацию займа
+                        </td>
+                        <td>
+                          0 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Комиссия за рассмотрение заявления и документов на получение займа
+                        </td>
+                        <td>
+                          0 тенге
+                        </td>
+                      </tr>
+                    </table>
+                    <table>
+                      <thead>
+                        <th colspan="2">Требования к заемщикам</th>
+                      </thead>
+                      <tr>
+                        <td>Целевая группа</td>
+                        <td>Гражданин РК</td>
+                      </tr>
+                      <tr>
+                        <td>Возраст на момент предоставления кредита</td>
+                        <td>от 21 года до достижения пенсионного возраста</td>
+                      </tr>
+                      <tr>
+                        <td>Общий стаж работы заемщика</td>
+                        <td>не менее 6 месяцев</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="terms-prompt">
+                    Примечание: ставки вознаграждения утверждены решением Комитета по управлению активами и пассивами (протокол №29-5 от 23.02.2024 г.)
+                  </div>
+                  <div class="terms-prompt">
+                    <span class="color-red">*</span>
+                    Банк вправе запросить дополнительные документы
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calculator-kredit" id="form2">
+            <div class="container">
+              <h2 class="section-title application-title">
+                кредитный калькулятор
+              </h2>
+              <div class="row">
+                <div class="col-lg-8 col-md-7">
+                  <form>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-6 col-md-6 d-none">
+                        <span class="span-t">Вид кредита</span>
+                        <select name="city-service" class="form-control city-service" id="city-service">
+                          <option value="zalog">Залоговый</option>
+                          <option value="bezzalogov" selected>Беззалоговый</option>
+                          <option value="refinance">Внешнее рефинансирование</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="ui-field">
+                          <label class="ui-label" for="name">
+                            Желаемая сумма кредита:
+                          </label>
+                          <div class="ui-input-wrapper">
+                            <input
+                              type="text"
+                              class="ui-input ui-input__excess data-sum"
+                              name="name"
+                              value="150000"
+                              data-value="sum"
+                              id="data-sum"
+                            >
+                            <span class="ui-field-excess">тенге</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="ui-field">
+                          <label class="ui-label" for="name">
+                            Срок кредита:
+                          </label>
+                          <div class="ui-input-wrapper">
+                            <input
+                              type="text"
+                              class="ui-input ui-input__excess"
+                              name="name"
+                              value="12"
+                              data-value="sum"
+                              id="data-period"
+                            >
+                            <span class="ui-field-excess">месяцев</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="ui-field__agree">
+                          <input
+                            type="checkbox"
+                            class="ui-checkbox"
+                            name="name"
+                            id="credit-commission"
+                            value="1"
+                            checked=""
+                          >
+                          <label for="credit-commission" class="ui-label-agree">С комиссией</label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <p class="calculator-kredit-description">
+                    Расчет ежемесячного платежа является предварительным и может отличаться от размера платежа на дату консультации/фактической выдачи займа.
+                    Информация предоставлена в ознакомительных целях, за более подробной информацией необходимо в филиал или ближайшее отделение Банка.
+                    Список отделений указан
+                    <a href="#">здесь</a>
+                  </p>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                  <div class="calculator-request">
+                    <div class="calculator-request-title">
+                      предварительный расчет
+                    </div>
+                    <div class="calculator-request-item">
+                      <div class="calculator-request-label">
+                        Сумма заявки
+                      </div>
+                      <div class="calculator-request-info">
+                        <div class="summa calculator-request-num result-mine" id="result-mine"></div>
+                        <div class="calculator-request-warnings">
+                          <div class="calculator-request-warning" id="result-min"></div>
+                          <div class="calculator-request-warning" id="result-max"></div>
+                          <div class="calculator-request-no-valid" id="result-sum-no-valid"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calculator-request-item">
+                      <div class="calculator-request-label pay">
+                        Ежемесячный платеж
+                      </div>
+                      <div class="calculator-request-info">
+                        <div class="pay-s calculator-request-num" id="result-total"></div>
+                        <div class="calculator-request-warnings">
+                          <div class="calculator-request-warning" id="result-period-min"></div>
+                          <div class="calculator-request-warning" id="result-period-max"></div>
+                          <div class="calculator-request-no-valid" id="result-total-no-valid"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="ui-btn ui-btn-block request-btn">
+                      Оформить заявку
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="description">
+            <div class="container">
+              <a href="#" class="ui-btn request-btn hidden-desktop">
                 подать заявку на кредит
               </a>
-            </div>
-            <div class="col-nm-5">
-              <div class="main-banner-image main-banner-image__desk">
-                <img src="./images/banner-image.png" loading="lazy">
+              <div class="description-wrapper">
+                <div class="description-text">
+                  <h2 class="section-title description-title">
+                    Информация для заемщика
+                  </h2>
+                  <div class="description-text-main">
+                    <p>
+                      Уведомляем о том, что если заемщик является физическим лицом, то он вправе в течение тридцати календарных дней
+                      с даты наступления просрочки исполнения обязательства по договору банковского займа (далее - Договор) посетить
+                      Банк и (или) представить в письменной форме либо способом, предусмотренным Договором, заявление,
+                      содержащее сведения о причинах возникновения просрочки исполнения обязательства по Договору,
+                      доходах и других подтвержденных обстоятельствах (фактах), которые обуславливают его заявление о внесении
+                      изменений в условия Договора, в соответствии с пунктом 1-1 статьи 36 Закона Республики Казахстан «О банках
+                      и банковской деятельности в Республике Казахстан» (далее - Закон о банках).
+                    </p>
+                    <p>
+                      При этом в течение пятнадцати календарных дней после дня получения заявления заемщика - физического лица,
+                      предусмотренного пунктом 1-1 статьи 36 Закона о банках, Банк рассматривает предложенные заемщиком - физическим
+                      лицом изменения в условия Договора и в письменной форме либо способом, предусмотренным Договором, сообщает заемщику - физическому лицу о (об):
+                    </p>
+                    <ol>
+                      <li>
+                        согласии с предложенными изменениями в условия Договора;
+                      </li>
+                      <li>
+                        своих предложениях по изменению условий Договора;
+                      </li>
+                      <li>
+                        отказе в изменении условий Договора с указанием мотивированного обоснования причин такого отказа.
+                      </li>
+                    </ol>
+                    <p>
+                      В случае получения решения Банка об отказе в изменении условий Договора или при недостижении взаимоприемлемого решения
+                      об изменении условий Договора, заемщик - физическое лицо в течение 15 (пятнадцати) календарных дней с даты получения решения
+                      Банка вправе обратиться в Агентство Республики Казахстан по регулированию и развитию финансового рынка с одновременным уведомлением Банка.
+                    </p>
+                    <p>
+                      При неудовлетворении заемщиком требования Банка о необходимости внесения платежей по Договору, в том числе просроченной задолженности,
+                      в соответствии с пунктом 2 статьи 36 Закона о банках Банк вправе обратить взыскание в бесспорном порядке на деньги, в том числе путем
+                      предъявления платежного требования, имеющиеся на банковских счетах заемщика (в случае если такое взыскание оговорено в Договоре),
+                      с учетом ограничений, предусмотренных Законом о банках.
+                    </p>
+                    <p>
+                      В случаях неудовлетворения заемщиком требования Банка о необходимости внесения платежей по Договору, в том числе просроченной задолженности,
+                      а также нереализации заемщиком - физическим лицом прав, предусмотренных пунктом 1-1 статьи 36 Закона о банках, либо отсутствия согласия между
+                      заемщиком - физическим лицом и Банком по изменению условий Договора, в соответствии с пунктом 2-1 статьи 36 Закона о банках Банк вправе
+                      применить в отношении заемщика меры, предусмотренные законодательством Республики Казахстан и (или) Договором, включая, но не ограничиваясь,
+                      передать задолженность на досудебное взыскание и урегулирование коллекторскому агентству (в случае наличия такого права Банка в Договоре),
+                      уступить право (требование) по Договору лицу, указанному в пункте 4 статьи 36-1 Закона о банках, обратиться с иском в суд о взыскании суммы
+                      долга по Договору, а также обратить взыскание на заложенное имущество во внесудебном порядке, за исключением случаев, предусмотренных Законом
+                      Республики Казахстан «Об ипотеке недвижимого имущества», либо в судебном порядке.
+                    </p>
+                  </div>
+                  <button class="ui-btn ui-btn-rounded description-more">
+                    <span>Читать подробнее</span>
+                    <svg class="ui-btn-icon">
+                      <use xlink:href="svg/svg/symbols.svg#shape"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="description-picture">
+                  <img
+                    src="./images/wooman.png"
+                    srcset="./images/wooman@2x.png 2x"
+                    alt="wooman"
+                    loading="lazy"
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      
-      <div class="terms">
-        <div class="container">
-          <div class="terms-header">
-            <h2 class="h2 section-title">
-              Условия кредитования
-            </h2>
-            <div class="ui-tabs">
-              <div class="ui-tab active" data-tab="tab-1">
-                С комиссиями
-              </div>
-              <div class="ui-tab" data-tab="tab-2">
-                Без комиссий
-              </div>
-            </div>
-          </div>
-          <div class="terms-table">
-            <table class="ui-tabs-wrapper active" id="tab-1">
-              <tr>
-                <td>
-                  Валюта кредитования
-                </td>
-                <td>
-                  тенге
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Сумма кредитования
-                </td>
-                <td>
-                  80% от рыночной стоимости залога, но не более 70 000 000 тенге
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Срок кредитования
-                </td>
-                <td>
-                  до 10 лет
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Залоговое обеспечение
-                </td>
-                <td>
-                  Жилая или коммерческая недвижимость
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Страхование
-                </td>
-                <td>
-                  Имущественное страхование залога обязательно
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Перечень документов оформления заявки<span class="color-red">*</span>
-                </td>
-                <td>
-                  Удостоверение личности<br>
-                  Документы на залог
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Ставка вознаграждения
-                </td>
-                <td>
-                  от 24% годовых**
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Комиссия за организацию займа
-                </td>
-                <td>
-                  2% от суммы кредита + 10 000 тенге
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Комиссия за рассмотрение заявления и документов на получение займа
-                </td>
-                <td>
-                  0 тенге
-                </td>
-              </tr>
-            </table>
-            <table class="ui-tabs-wrapper" id="tab-2">
-              <tr>
-                <td>
-                  Валюта кредитования
-                </td>
-                <td>
-                  тенге
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Сумма кредитования
-                </td>
-                <td>
-                  80% от рыночной стоимости залога, но не более 70 000 000 тенге
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Срок кредитования
-                </td>
-                <td>
-                  до 10 лет
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Залоговое обеспечение
-                </td>
-                <td>
-                  Жилая или коммерческая недвижимость
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Страхование
-                </td>
-                <td>
-                  Имущественное страхование залога обязательно
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Перечень документов оформления заявки<span class="color-red">*</span>
-                </td>
-                <td>
-                  Удостоверение личности<br>
-                  Документы на залог
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Ставка вознаграждения
-                </td>
-                <td>
-                  от 29% годовых***
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Комиссия за организацию займа
-                </td>
-                <td>
-                  0 тенге
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Комиссия за рассмотрение заявления и документов на получение займа
-                </td>
-                <td>
-                  0 тенге
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div class="terms-prompt">
-            <span class="color-red">*</span>Банк вправе запросить дополнительные документы
-          </div>
-        </div>
-      </div>
-
-      <div class="description">
-        <div class="container">
-          <a href="#" class="ui-btn request-btn hidden-desktop">
-            подать заявку на кредит
-          </a>
-          <div class="description-wrapper">
-            <div class="description-text">
-              <h2 class="section-title description-title">
-                Что такое Залоговый кредит
+          <div class="application">
+            <div class="container">
+              <h2 class="section-title application-title">
+                Заявка на консультацию
               </h2>
-              <p>
-                Ищите способ получить залоговый кредит на крупную сумму? Рекомендуем обратиться в Nurbank и оформить кредит под залог недвижимости!
-              </p>
-              <p>
-                Кредит под залог недвижимости – это классический и очень распространённый вариант займа крупных сумм денег для людей,
-                которые могут оформить своё жильё в качестве залогового обязательства.  
-              </p>
-              <p>
-                Недвижимое имущество является достаточно дорогостоящим активом и зачастую оно не приносит вам никакого дохода.
-                Однако в ситуациях, когда вам нужны деньги для каких-то серьёзных покупок, мы советуем использовать своё
-                жильё для обеспечения залогового кредита.
-              </p>
-              <a href="#" class="ui-btn ui-btn-rounded">
-                Читать подробнее
-                <svg class="ui-btn-icon">
-                  <use xlink:href="svg/svg/symbols.svg#shape" />
-                </svg>
+              <form class="application-form" id="requestForm">
+                <div class="row">
+                  <div class="col-lg-4 col-sm-6">
+                    <div class="ui-field">
+                      <label class="ui-label" for="name">
+                        ИМЯ:
+                        <!-- <span class="ui-label-required">*</span> -->
+                      </label>
+                      <input
+                        type="text"
+                        class="ui-input"
+                        name="name"
+                        id="name"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                    <div class="ui-field">
+                      <label class="ui-label" for="iin">
+                        ИИН:
+                      </label>
+                      <input
+                        type="text"
+                        class="ui-input"
+                        name="iin"
+                        id="iin"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                    <div class="ui-field">
+                      <label class="ui-label" for="phone">
+                        ТЕЛЕФОН:
+                        <!-- <span class="ui-label-required">*</span> -->
+                      </label>
+                      <input
+                        type="text"
+                        class="ui-input ux-phonemask"
+                        name="phone"
+                        id="phone"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                    <div class="ui-field d-none">
+                      <label class="ui-label" for="type">
+                        ВИД КРЕДИТА:
+                      </label>
+                      <select name="type" id="type" class="ui-select">
+                        <option value="">
+                          Выберите тип кредита
+                        </option>
+                        <option value="Залоговый кредит">
+                          Залоговый кредит
+                        </option>
+                        <option value="Беззалоговый кредит" selected>
+                          Беззалоговый кредит
+                        </option>
+                        <option value="Рефинансирование">
+                          Рефинансирование
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="ui-field__agree">
+                      <input
+                        type="checkbox"
+                        class="ui-checkbox"
+                        name="agree"
+                        id="agree"
+                      >
+                      <label for="agree" class="ui-label-agree">Согласен на обработку персональных данных</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-nm-6">
+                    <button class="ui-btn ui-btn-block">
+                      подать заявку на кредит
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <script>
+              function refresh_c(){              
+                $("#captchaImg").attr("src","mail/captcha.php?r=" + Math.random());
+              }
+              $(document).ready(function () {
+                $.validator.addMethod("noDigits", function(value, element) {
+                  return this.optional(element) || !/\d/.test(value);
+                }, 'В этом поле нельзя вводить цифры');
+        
+                $.validator.addMethod("phone", function (value, element) {
+                if (value.startsWith('+375')) {
+                  return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){12}(\s*)?$/i.test(value);
+                } else if (value.startsWith('+7')) {
+                  return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11}(\s*)?$/i.test(value);
+                } else {
+                  return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?$/i.test(value);
+                }
+              }, "Введите полный номер");   
+        
+                $.validator.messages.required = 'Пожалуйста, заполните это поле';
+        
+                $(".application-form").validate({
+                  submitHandler: function(form, event) {
+            
+                    event.preventDefault();
+                    $.ajax({
+                      url:'/mail/oForm.php',
+                      data:$('form.application-form').serialize(),
+                      async:false,
+                      type:'POST',
+                      success:function(data){
+                        
+                        if(data == 'OK'){
+              dataLayer.push({'event': 'form_sendrequestForm'});
+                          $.magnificPopup.open({
+                          items: { src: '/popups/popup-success.html' },
+                          type: "ajax",
+                          overflowY: "scroll",
+                          removalDelay: 300,
+                          mainClass: 'my-mfp-zoom-in',
+                          ajax: {
+                            tError: "Error. Not valid url",
+                          },
+                          callbacks: {
+                            parseAjax: function () {
+                            
+                            }
+                          },				  						
+                          });
+                          setTimeout(() => {
+                            $('.mfp-close-btn-in .mfp-close').click();
+                          }, 5000);
+                          form.reset();
+                        
+                        }
+                        if(data == 'ERROR_CAPTCHA'){
+                          $('#captcha').addClass('error').after('<label id="captcha-error" class="error" for="captcha">Неверный проверочный код</label>');
+                        }
+                      }
+                    })
+                    
+                  },
+                  rules: {               
+                    name: { noDigits: true, required: true },
+                    phone: { phone: true, required: true },
+                    captcha: { required: true },
+                    agree: { required: true }            
+                  },
+                });             
+              });
+              </script>
+            </div>
+          </div>
+        </div>
+        <!-- основной контент для рефенансирования конец -->
+        <div class="tab-content active" data-content="refinance">
+          <div class="terms">
+            <div class="container">
+              <div class="terms-header">
+                <h2 class="h2 section-title">
+                  Условия кредитования
+                </h2>
+                <div class="ui-tabs">
+                  <div class="ui-tab" data-tab="tab-1">
+                    С комиссиями
+                  </div>
+                  <div class="ui-tab active" data-tab="tab-2">
+                    Без комиссий
+                  </div>
+                </div>
+              </div>
+              <div class="terms-table2">
+                <div class="ui-tabs-wrapper" id="tab-1">
+                  <div class="terms-table">
+                    <table>
+                      <tr>
+                        <td>
+                          Валюта кредитования
+                        </td>
+                        <td>
+                          тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Сумма кредитования
+                        </td>
+                        <td>
+                          от 150 000 до 7 000 000 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Срок кредитования
+                        </td>
+                        <td>
+                          от 12 до 60 месяцев
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Комиссия за организацию займа
+                        </td>
+                        <td>
+                          от 5 000 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Комиссия за рассмотрение заявления и документов на получение займа
+                        </td>
+                        <td>
+                          0 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Перечень документов оформления заявки
+                          <span class="color-red">*</span>
+                        </td>
+                        <td>
+                          Удостоверение личности
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Срок рассмотрения заявки
+                        </td>
+                        <td>
+                          От 15 минут
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Ставка вознаграждения (в годовых)
+                        </td>
+                        <td>
+                          от 21,8% годовых (ГЭСВ от 24,15%)
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="terms-prompt">
+                    <span class="color-red">*</span>
+                    Банк вправе запросить дополнительные документы
+                  </div>
+                </div>
+                <div class="ui-tabs-wrapper active" id="tab-2">
+                  <div class="terms-table">
+                    <table>
+                      <tr>
+                        <td>
+                          Валюта кредитования
+                        </td>
+                        <td>
+                          тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Сумма кредитования
+                        </td>
+                        <td>
+                          от 150 000 до 7 000 000 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Срок кредитования
+                        </td>
+                        <td>
+                          от 12 до 60 месяцев
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Комиссия за организацию займа
+                        </td>
+                        <td>
+                          от 5 000 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Комиссия за рассмотрение заявления и документов на получение займа
+                        </td>
+                        <td>
+                          0 тенге
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Перечень документов оформления заявки
+                          <span class="color-red">*</span>
+                        </td>
+                        <td>
+                          Удостоверение личности
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Срок рассмотрения заявки
+                        </td>
+                        <td>
+                          От 15 минут
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Ставка вознаграждения (в годовых)
+                        </td>
+                        <td>
+                          от 33% годовых (ГЭСВ от 38,3%%)
+                        </td>
+                      </tr>
+                    </table>
+                    <table>
+                      <thead>
+                        <th colspan="2">Требования к заемщикам</th>
+                      </thead>
+                      <tr>
+                        <td>Целевая группа</td>
+                        <td>Гражданин РК</td>
+                      </tr>
+                      <tr>
+                        <td>Возраст на момент предоставления кредита</td>
+                        <td>от 21 года до достижения пенсионного возраста</td>
+                      </tr>
+                      <tr>
+                        <td>Общий стаж работы заемщика</td>
+                        <td>не менее 6 месяцев</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="terms-prompt">
+                    Примечание: ставки вознаграждения утверждены решением Комитета по управлению активами и пассивами (протокол №29-5 от 23.02.2024 г.)
+                  </div>
+                  <div class="terms-prompt">
+                    <span class="color-red">*</span>
+                    Банк вправе запросить дополнительные документы
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calculator-kredit" id="form3">
+            <div class="container">
+              <h2 class="section-title application-title">
+                кредитный калькулятор
+              </h2>
+              <div class="row">
+                <div class="col-lg-8 col-md-7">
+                  <form>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-6 col-md-6 d-none">
+                        <span class="span-t">Вид кредита</span>
+                        <select name="city-service" class="form-control city-service" id="city-service">
+                          <option value="zalog">Залоговый</option>
+                          <option value="bezzalogov">Беззалоговый</option>
+                          <option value="refinance" selected>Внешнее рефинансирование</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="ui-field">
+                          <label class="ui-label" for="name">
+                            Желаемая сумма кредита:
+                          </label>
+                          <div class="ui-input-wrapper">
+                            <input
+                              type="text"
+                              class="ui-input ui-input__excess data-sum"
+                              name="name"
+                              value="150000"
+                              data-value="sum"
+                              id="data-sum"
+                            >
+                            <span class="ui-field-excess">тенге</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="ui-field">
+                          <label class="ui-label" for="name">
+                            Срок кредита:
+                          </label>
+                          <div class="ui-input-wrapper">
+                            <input
+                              type="text"
+                              class="ui-input ui-input__excess"
+                              name="name"
+                              value="3"
+                              data-value="sum"
+                              id="data-period"
+                            >
+                            <span class="ui-field-excess">месяцев</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="ui-field__agree">
+                          <input
+                            type="checkbox"
+                            class="ui-checkbox"
+                            name="name"
+                            id="credit-commission"
+                            value="1"
+                            checked=""
+                          >
+                          <label for="credit-commission" class="ui-label-agree">С комиссией</label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <p class="calculator-kredit-description">
+                    Расчет ежемесячного платежа является предварительным и может отличаться от размера платежа на дату консультации/фактической выдачи займа.
+                    Информация предоставлена в ознакомительных целях, за более подробной информацией необходимо в филиал или ближайшее отделение Банка.
+                    Список отделений указан
+                    <a href="#">здесь</a>
+                  </p>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                  <div class="calculator-request">
+                    <div class="calculator-request-title">
+                      предварительный расчет
+                    </div>
+                    <div class="calculator-request-item">
+                      <div class="calculator-request-label">
+                        Сумма заявки
+                      </div>
+                      <div class="calculator-request-info">
+                        <div class="summa calculator-request-num result-mine" id="result-mine"></div>
+                        <div class="calculator-request-warnings">
+                          <div class="calculator-request-warning" id="result-min"></div>
+                          <div class="calculator-request-warning" id="result-max"></div>
+                          <div class="calculator-request-no-valid" id="result-sum-no-valid"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calculator-request-item">
+                      <div class="calculator-request-label pay">
+                        Ежемесячный платеж
+                      </div>
+                      <div class="calculator-request-info">
+                        <div class="pay-s calculator-request-num" id="result-total"></div>
+                        <div class="calculator-request-warnings">
+                          <div class="calculator-request-warning" id="result-period-min"></div>
+                          <div class="calculator-request-warning" id="result-period-max"></div>
+                          <div class="calculator-request-no-valid" id="result-total-no-valid"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="ui-btn ui-btn-block request-btn">
+                      Оформить заявку
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="description">
+            <div class="container">
+              <a href="#" class="ui-btn request-btn hidden-desktop">
+                подать заявку на кредит
+              </a>
+              <div class="description-wrapper">
+                <div class="description-text">
+                  <h2 class="section-title description-title">
+                    Информация для заемщика
+                  </h2>
+                  <div class="description-text-main">
+                    <p>
+                      Уведомляем о том, что если заемщик является физическим лицом, то он вправе в течение тридцати календарных дней
+                      с даты наступления просрочки исполнения обязательства по договору банковского займа (далее - Договор) посетить
+                      Банк и (или) представить в письменной форме либо способом, предусмотренным Договором, заявление,
+                      содержащее сведения о причинах возникновения просрочки исполнения обязательства по Договору,
+                      доходах и других подтвержденных обстоятельствах (фактах), которые обуславливают его заявление о внесении
+                      изменений в условия Договора, в соответствии с пунктом 1-1 статьи 36 Закона Республики Казахстан «О банках
+                      и банковской деятельности в Республике Казахстан» (далее - Закон о банках).
+                    </p>
+                    <p>
+                      При этом в течение пятнадцати календарных дней после дня получения заявления заемщика - физического лица,
+                      предусмотренного пунктом 1-1 статьи 36 Закона о банках, Банк рассматривает предложенные заемщиком - физическим
+                      лицом изменения в условия Договора и в письменной форме либо способом, предусмотренным Договором, сообщает заемщику - физическому лицу о (об):
+                    </p>
+                    <ol>
+                      <li>
+                        согласии с предложенными изменениями в условия Договора;
+                      </li>
+                      <li>
+                        своих предложениях по изменению условий Договора;
+                      </li>
+                      <li>
+                        отказе в изменении условий Договора с указанием мотивированного обоснования причин такого отказа.
+                      </li>
+                    </ol>
+                    <p>
+                      В случае получения решения Банка об отказе в изменении условий Договора или при недостижении взаимоприемлемого решения
+                      об изменении условий Договора, заемщик - физическое лицо в течение 15 (пятнадцати) календарных дней с даты получения решения
+                      Банка вправе обратиться в Агентство Республики Казахстан по регулированию и развитию финансового рынка с одновременным уведомлением Банка.
+                    </p>
+                    <p>
+                      При неудовлетворении заемщиком требования Банка о необходимости внесения платежей по Договору, в том числе просроченной задолженности,
+                      в соответствии с пунктом 2 статьи 36 Закона о банках Банк вправе обратить взыскание в бесспорном порядке на деньги, в том числе путем
+                      предъявления платежного требования, имеющиеся на банковских счетах заемщика (в случае если такое взыскание оговорено в Договоре),
+                      с учетом ограничений, предусмотренных Законом о банках.
+                    </p>
+                    <p>
+                      В случаях неудовлетворения заемщиком требования Банка о необходимости внесения платежей по Договору, в том числе просроченной задолженности,
+                      а также нереализации заемщиком - физическим лицом прав, предусмотренных пунктом 1-1 статьи 36 Закона о банках, либо отсутствия согласия между
+                      заемщиком - физическим лицом и Банком по изменению условий Договора, в соответствии с пунктом 2-1 статьи 36 Закона о банках Банк вправе
+                      применить в отношении заемщика меры, предусмотренные законодательством Республики Казахстан и (или) Договором, включая, но не ограничиваясь,
+                      передать задолженность на досудебное взыскание и урегулирование коллекторскому агентству (в случае наличия такого права Банка в Договоре),
+                      уступить право (требование) по Договору лицу, указанному в пункте 4 статьи 36-1 Закона о банках, обратиться с иском в суд о взыскании суммы
+                      долга по Договору, а также обратить взыскание на заложенное имущество во внесудебном порядке, за исключением случаев, предусмотренных Законом
+                      Республики Казахстан «Об ипотеке недвижимого имущества», либо в судебном порядке.
+                    </p>
+                  </div>
+                  <button class="ui-btn ui-btn-rounded description-more">
+                    <span>Читать подробнее</span>
+                    <svg class="ui-btn-icon">
+                      <use xlink:href="svg/svg/symbols.svg#shape"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="description-picture">
+                  <img
+                    src="./images/wooman.png"
+                    srcset="./images/wooman@2x.png 2x"
+                    alt="wooman"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="application">
+            <div class="container">
+              <h2 class="section-title application-title">
+                Заявка на консультацию
+              </h2>
+              <form class="application-form" id="requestForm">
+                <div class="row">
+                  <div class="col-lg-4 col-sm-6">
+                    <div class="ui-field">
+                      <label class="ui-label" for="name">
+                        ИМЯ:
+                        <!-- <span class="ui-label-required">*</span> -->
+                      </label>
+                      <input
+                        type="text"
+                        class="ui-input"
+                        name="name"
+                        id="name"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                    <div class="ui-field">
+                      <label class="ui-label" for="iin">
+                        ИИН:
+                      </label>
+                      <input
+                        type="text"
+                        class="ui-input"
+                        name="iin"
+                        id="iin"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                    <div class="ui-field">
+                      <label class="ui-label" for="phone">
+                        ТЕЛЕФОН:
+                        <!-- <span class="ui-label-required">*</span> -->
+                      </label>
+                      <input
+                        type="text"
+                        class="ui-input ux-phonemask"
+                        name="phone"
+                        id="phone"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                    <div class="ui-field d-none">
+                      <label class="ui-label" for="type">
+                        ВИД КРЕДИТА:
+                      </label>
+                      <select name="type" id="type" class="ui-select">
+                        <option value="">
+                          Выберите тип кредита
+                        </option>
+                        <option value="Залоговый кредит">
+                          Залоговый кредит
+                        </option>
+                        <option value="Беззалоговый кредит">
+                          Беззалоговый кредит
+                        </option>
+                        <option value="Рефинансирование" selected>
+                          Рефинансирование
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="ui-field__agree">
+                      <input
+                        type="checkbox"
+                        class="ui-checkbox"
+                        name="agree"
+                        id="agree"
+                      >
+                      <label for="agree" class="ui-label-agree">Согласен на обработку персональных данных</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-nm-6">
+                    <button class="ui-btn ui-btn-block">
+                      подать заявку на кредит
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <script>
+              function refresh_c(){              
+                $("#captchaImg").attr("src","mail/captcha.php?r=" + Math.random());
+              }
+              $(document).ready(function () {
+                $.validator.addMethod("noDigits", function(value, element) {
+                  return this.optional(element) || !/\d/.test(value);
+                }, 'В этом поле нельзя вводить цифры');
+        
+                $.validator.addMethod("phone", function (value, element) {
+                if (value.startsWith('+375')) {
+                  return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){12}(\s*)?$/i.test(value);
+                } else if (value.startsWith('+7')) {
+                  return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11}(\s*)?$/i.test(value);
+                } else {
+                  return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?$/i.test(value);
+                }
+              }, "Введите полный номер");   
+        
+                $.validator.messages.required = 'Пожалуйста, заполните это поле';
+        
+                $(".application-form").validate({
+                  submitHandler: function(form, event) {
+            
+                    event.preventDefault();
+                    $.ajax({
+                      url:'/mail/oForm.php',
+                      data:$('form.application-form').serialize(),
+                      async:false,
+                      type:'POST',
+                      success:function(data){
+                        
+                        if(data == 'OK'){
+              dataLayer.push({'event': 'form_sendrequestForm'});
+                          $.magnificPopup.open({
+                          items: { src: '/popups/popup-success.html' },
+                          type: "ajax",
+                          overflowY: "scroll",
+                          removalDelay: 300,
+                          mainClass: 'my-mfp-zoom-in',
+                          ajax: {
+                            tError: "Error. Not valid url",
+                          },
+                          callbacks: {
+                            parseAjax: function () {
+                            
+                            }
+                          },				  						
+                          });
+                          setTimeout(() => {
+                            $('.mfp-close-btn-in .mfp-close').click();
+                          }, 5000);
+                          form.reset();
+                        
+                        }
+                        if(data == 'ERROR_CAPTCHA'){
+                          $('#captcha').addClass('error').after('<label id="captcha-error" class="error" for="captcha">Неверный проверочный код</label>');
+                        }
+                      }
+                    })
+                    
+                  },
+                  rules: {               
+                    name: { noDigits: true, required: true },
+                    phone: { phone: true, required: true },
+                    captcha: { required: true },
+                    agree: { required: true }            
+                  },
+                });             
+              });
+              </script>
+            </div>
+          </div>
+        </div>
+        <!-- основной контент для рефенансирования конец -->
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-wrapper">
+            <a href="#" class="footer-logo">
+              <img src="./images/logo.png" alt="nurbank" loading="lazy">
+            </a>
+            <div class="footer-socials">
+              <a href="https://www.instagram.com/nurbank/" class="footer-socials-item">
+                <div class="footer-socials-icon">
+                  <svg class="icon">
+                    <use xlink:href="./svg/svg/symbols.svg#inst"/>
+                  </svg>
+                </div>
+                <div class="footer-socials-text">
+                  <svg class="footer-socials-at">
+                    <use xlink:href="./svg/svg/symbols.svg#at"/>
+                  </svg>
+                  <span>nurbank</span>
+                </div>
+              </a>
+              <a href="https://www.facebook.com/JSCNurbank" class="footer-socials-item">
+                <div class="footer-socials-icon">
+                  <svg class="icon">
+                    <use xlink:href="./svg/svg/symbols.svg#fb"/>
+                  </svg>
+                </div>
+                JSCNurbank
+              </a>
+              <a href="https://nurbank.kz" class="footer-socials-item">
+                <div class="footer-socials-icon">
+                  <svg class="icon">
+                    <use xlink:href="./svg/svg/symbols.svg#int"/>
+                  </svg>
+                </div>
+                www.nurbank.kz
               </a>
             </div>
-            <div class="description-picture">
-              <img src="./images/wooman.png" srcset="./images/wooman@2x.png 2x" alt="wooman" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="application">
-        <div class="container">
-          <h2 class="section-title application-title">
-            Заявка на консультацию по кредиту
-          </h2>
-          <form class="application-form">
-            <div class="row">
-              <div class="col-lg-4 col-sm-6">
-                <div class="ui-field">
-                  <label class="ui-label" for="name">
-                    ИМЯ:<span class="ui-label-required">*</span>
-                  </label>
-                  <input type="text" class="ui-input" name="name" id="name">
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <div class="ui-field">
-                  <label class="ui-label" for="city">
-                    ГОРОД:
-                  </label>
-                  <input type="text" class="ui-input" name="city" id="city">
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <div class="ui-field">
-                  <label class="ui-label" for="phone">
-                    ТЕЛЕФОН:<span class="ui-label-required">*</span>
-                  </label>
-                  <input type="text" class="ui-input ux-phonemask" name="phone" id="phone">
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <div class="ui-field">
-                  <label class="ui-label" for="iin">
-                    ИИН:
-                  </label>
-                  <input type="text" class="ui-input" name="iin" id="iin">
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                <div class="ui-field">
-                  <label class="ui-label" for="type">
-                    ВИД КРЕДИТА:
-                  </label>
-                  <select name="type" id="type" class="ui-select">
-                    <option disabled selected>
-                      Выберите тип кредита
-                    </option>
-                    <option value="1">
-                      Нужна консультация
-                    </option>
-                    <option value="2">
-                      Залоговый кредит
-                    </option>
-                    <option value="3">
-                      Беззалоговый кредит
-                    </option>
-                    <option value="4">
-                      Рефинансирование
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-2 col-sm-3 col-us-6">
-                <div class="ui-field">
-                  <label class="ui-label" for="captcha">
-                    капча:<span class="ui-label-required">*</span>
-                  </label>
-                  <input type="text" class="ui-input" name="captcha" id="captcha">
-                </div>
-              </div>
-              <div class="col-lg-2 col-sm-3 col-us-6 flex valign-end ">
-                <div class="ui-captcha">
-                  <img src="./images/init.php" alt="Captcha">
-                  <button id="capt_refresh" type="button" onclick="captcha_refresh();" title="Refresh">
-                    <img src="./images/refresh.png" alt="Refresh">
-                  </button>            
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="ui-field__agree">
-                  <input type="checkbox" class="ui-checkbox" name="agree" id="agree">
-                  <label for="agree" class="ui-label-agree">Согласен на обработку персональных данных</label>
-                </div>                
-              </div>
-              <div class="col-lg-4 col-nm-6">
-                <button class="ui-btn ui-btn-block">
-                  подать заявку на кредит
-                </button>
-              </div>
-            </div>            
-          </form>
-
-          <script>
-            $(document).ready(function () {
-              $.validator.addMethod("noDigits", function(value, element) {
-                return this.optional(element) || !/\d/.test(value);
-              }, 'В этом поле нельзя вводить цифры');
-      
-              $.validator.addMethod("phone", function (value, element) {
-              if (value.startsWith('+375')) {
-                return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){12}(\s*)?$/i.test(value);
-              } else if (value.startsWith('+7')) {
-                return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11}(\s*)?$/i.test(value);
-              } else {
-                return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?$/i.test(value);
-              }
-            }, "Введите полный номер");   
-      
-              $.validator.messages.required = 'Пожалуйста, заполните это поле';
-      
-              $(".application-form").validate({
-                submitHandler: function(form, event) {
-                  event.preventDefault();
-                  form.reset();
-                },
-                rules: {               
-                  name: { noDigits: true, required: true },
-                  phone: { phone: true, required: true },
-                  captcha: { required: true },
-                  agree: { required: true }            
-                },
-              });             
-            });     
-              
-          </script>
-
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-wrapper">         
-          <a href="#" class="footer-logo">
-            <img src="./images/logo.png" alt="nurbank" loading="lazy">
-          </a>
-          <div class="footer-socials">
-            <a href="#" class="footer-socials-item">
-              <div class="footer-socials-icon">
-                <svg class="icon">
-                  <use xlink:href="svg/svg/symbols.svg#inst" />
-                </svg>
-              </div>
-              <div class="footer-socials-text">
-                <svg class="footer-socials-at">
-                  <use xlink:href="svg/svg/symbols.svg#at" />
-                </svg>
-                <span>nurbank</span>
-              </div>              
-            </a>
-            <a href="#" class="footer-socials-item">
-              <div class="footer-socials-icon">
-                <svg class="icon">
-                  <use xlink:href="svg/svg/symbols.svg#fb" />
-                </svg>
-              </div>
-              JSCNurbank
-            </a>
-            <a href="#" class="footer-socials-item">
-              <div class="footer-socials-icon">
-                <svg class="icon">
-                  <use xlink:href="svg/svg/symbols.svg#int" />
-                </svg>
-              </div>
-              www.nurbank.kz
+            <a href="tel:2552" class="footer-phone">
+              <img src="./images/phone.svg" alt="phone">
             </a>
           </div>
-          <a href="tel:2552" class="footer-phone">
-            <img src="./images/phone.svg" alt="phone">
-          </a>
-        </div>        
-      </div>
-    </footer>
-
-  </div>
-
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
-  <script src="https://unpkg.com/imask"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
-  integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="./scripts/scripts.js"></script>
-</body>
-
+          <div class="copyring">
+            Лицензия на проведение банковских и иных операций и деятельности на рынке ценных бумаг №1.2.15/193
+			 от 3 февраля 2020 года, выданная Агентством РК по регулированию и развитию финансового рынка
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+      integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./scripts/scripts.js"></script>
+  </body>
 </html>

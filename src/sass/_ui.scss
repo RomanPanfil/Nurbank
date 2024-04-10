@@ -401,6 +401,15 @@ table {
 			left: 12px;
 		}
 	}
+
+	&-excess {
+		position: absolute;
+		@include fz(16);
+		top: 50%;
+		transform: translateY(-50%);
+		right: 20px;
+		font-weight: 700;
+	}
 }
 
 .ui-label {	
@@ -444,6 +453,7 @@ table {
 	border: 1px solid $border;
 	background-color: $bg_input;
 	outline: none;
+	width: 100%;
 
 	@media(max-width: 1280px) {		
 		padding: 22px 18px;		
@@ -457,6 +467,14 @@ table {
 
 	&.error {
 		border-color: $error;
+	}
+
+	&-wrapper {
+		position: relative;
+	}
+
+	&__excess {
+		padding-right: 100px;
 	}
 }
 
@@ -683,4 +701,8 @@ table {
 	@media (min-width: 993px) {
 		display: none;
 	}
+}
+
+.d-none {
+	display: none;
 }
