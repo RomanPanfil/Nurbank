@@ -43,6 +43,69 @@
       margin-bottom: 34px;
     }
 
+    &__picture {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      position: relative;      
+      margin-bottom: 90px;
+
+      @media(max-width: 1140px) {        
+        margin-bottom: 64px;
+      }
+  
+      @media(max-width: 768px) {     
+        margin-bottom: 54px;
+      }
+  
+      @media(max-width: 480px) {
+        margin-bottom: 34px;
+      }
+
+      img {
+        min-width: 1920px;
+        max-width: 100%;
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media(max-width:1440px) {
+          min-width: unset;
+          aspect-ratio: 1.75;
+          object-fit: cover;
+        }
+
+        @media(max-width: 992px) {
+          aspect-ratio: 0.87;
+        }
+
+        @media(max-width: 599px) {
+          aspect-ratio: 0.64;
+        }
+      }
+
+      .request-btn {
+        position: absolute;
+        bottom: min(4vw, 60px);   
+
+        @media(max-width: 992px) {
+          // padding-top: 32px;
+          // padding-bottom: 32px;
+          bottom: min(8vw, 90px); 
+        }
+        
+        @media(max-width: 768px) {
+          // padding-top: 24px;
+          // padding-bottom: 24px;
+        }
+
+        @media(max-width: 599px) {
+          width: calc(100% - 40px);
+        }
+      }
+    }
+
     .ui-btn {
 
       @media(max-width: 480px) {
@@ -422,6 +485,22 @@
       padding-right: 0;
     }
 
+    .h5 {
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 40px;
+
+      @media(max-width: 1280px) {
+        @include fz(20);
+        margin-bottom: 32px;
+      }
+
+      @media(max-width: 480px) {
+        @include fz(18);
+        margin-bottom: 32px;
+      }
+    }
+
     .ui-btn-icon {
       &.opened {
         transform: rotate(-90deg);
@@ -430,18 +509,31 @@
 
     &-main {
       overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 10;
-      -webkit-box-orient: vertical;
-      margin-bottom: 68px;
 
-      &.show-full {
-        overflow: auto;
-        text-overflow: initial;
-        display: block;
-        -webkit-line-clamp: initial;
-        -webkit-box-orient: initial;
+      &-short {
+        margin-bottom: 68px;
+        @media(max-width: 1280px) {
+          margin-bottom: 52px;
+        }
+        @media(max-width: 480px) {
+          margin-bottom: 42px;
+        }
+      }
+      &-long {
+        height: 0;           
+        
+        &.show-full {
+          height: max-content;
+          margin-bottom: 68px;
+
+          @media(max-width: 1280px) {
+            margin-bottom: 52px;
+          }
+
+          @media(max-width: 480px) {
+            margin-bottom: 42px;
+          }
+        }
       }
 
       ol {
@@ -475,9 +567,9 @@
     }
 
     p {
-      &:last-of-type {
-        margin-bottom: 0;        
-      }
+      // &:last-of-type {
+      //   margin-bottom: 0;        
+      // }
 
       @media(max-width: 480px) {
         line-height: 1.3;

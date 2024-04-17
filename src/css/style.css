@@ -656,6 +656,22 @@ table {
   white-space: nowrap;
   overflow-x: auto;
 }
+@media (max-width: 992px) {
+  .ui-tabs {
+    scrollbar-width: 0;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+  .ui-tabs::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
 
 .ui-tab {
   font-size: 24px;
@@ -784,6 +800,14 @@ table {
     padding-top: 22px;
     padding-bottom: 22px;
     border-radius: 8px;
+  }
+}
+@media (max-width: 360px) {
+  .ui-btn {
+    font-size: 14px;
+    font-size: 0.875rem;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 }
 .ui-btn-icon {
@@ -2598,7 +2622,7 @@ table {
 }
 .header-phone {
   max-width: 147px;
-  max-height: 65px;
+  max-height: 64px;
 }
 @media (max-width: 1280px) {
   .header-phone {
@@ -2660,6 +2684,70 @@ table {
     padding-top: 36px;
     padding-bottom: 36px;
     margin-bottom: 34px;
+  }
+}
+.main-banner__picture {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 90px;
+}
+@media (max-width: 1140px) {
+  .main-banner__picture {
+    margin-bottom: 64px;
+  }
+}
+@media (max-width: 768px) {
+  .main-banner__picture {
+    margin-bottom: 54px;
+  }
+}
+@media (max-width: 480px) {
+  .main-banner__picture {
+    margin-bottom: 34px;
+  }
+}
+.main-banner__picture img {
+  min-width: 1920px;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media (max-width: 1440px) {
+  .main-banner__picture img {
+    min-width: unset;
+    aspect-ratio: 1.75;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (max-width: 992px) {
+  .main-banner__picture img {
+    aspect-ratio: 0.87;
+  }
+}
+@media (max-width: 599px) {
+  .main-banner__picture img {
+    aspect-ratio: 0.64;
+  }
+}
+.main-banner__picture .request-btn {
+  position: absolute;
+  bottom: min(4vw, 60px);
+}
+@media (max-width: 992px) {
+  .main-banner__picture .request-btn {
+    bottom: min(8vw, 90px);
+  }
+}
+@media (max-width: 599px) {
+  .main-banner__picture .request-btn {
+    width: calc(100% - 40px);
   }
 }
 @media (max-width: 480px) {
@@ -3075,6 +3163,25 @@ table {
     padding-right: 0;
   }
 }
+.description-text .h5 {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+@media (max-width: 1280px) {
+  .description-text .h5 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .description-text .h5 {
+    font-size: 18px;
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+  }
+}
 .description-text .ui-btn-icon.opened {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
@@ -3082,20 +3189,38 @@ table {
 }
 .description-text-main {
   overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 10;
-  -webkit-box-orient: vertical;
+}
+.description-text-main-short {
   margin-bottom: 68px;
 }
-.description-text-main.show-full {
-  overflow: auto;
-  -o-text-overflow: initial;
-     text-overflow: initial;
-  display: block;
-  -webkit-line-clamp: initial;
-  -webkit-box-orient: initial;
+@media (max-width: 1280px) {
+  .description-text-main-short {
+    margin-bottom: 52px;
+  }
+}
+@media (max-width: 480px) {
+  .description-text-main-short {
+    margin-bottom: 42px;
+  }
+}
+.description-text-main-long {
+  height: 0;
+}
+.description-text-main-long.show-full {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-bottom: 68px;
+}
+@media (max-width: 1280px) {
+  .description-text-main-long.show-full {
+    margin-bottom: 52px;
+  }
+}
+@media (max-width: 480px) {
+  .description-text-main-long.show-full {
+    margin-bottom: 42px;
+  }
 }
 .description-text-main ol {
   counter-reset: list-counter;
@@ -3123,9 +3248,6 @@ table {
   .description-text .ui-btn {
     width: 100%;
   }
-}
-.description-text p:last-of-type {
-  margin-bottom: 0;
 }
 @media (max-width: 480px) {
   .description-text p {

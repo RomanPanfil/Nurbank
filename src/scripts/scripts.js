@@ -88,35 +88,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // маска ввода номера телефона
   function initMask() {
-    const inputs = document.querySelectorAll('.ux-phonemask'); 
+    const phoneInputs = document.querySelectorAll('.ux-phonemask');
+    const iinInputs = document.querySelectorAll('.ux-iin');
   
-    if(!inputs.length) return
-
-    inputs.forEach(element => {
-      IMask(element, {
-        mask: [          
-          {
-            mask: '+{7} (000) 000 00 00',
-            startsWith: '7',
-            overwrite: true,
-            lazy: false,
-            placeholderChar: '_',
-          },
-          {
-            mask: '+0000000000000',
-            startsWith: '',
-            country: 'unknown'
-          }
-        ],
-        dispatch: (appended, dynamicMasked) => {
-          const number = (dynamicMasked.value + appended).replace(/\D/g,'');
-      
-          return dynamicMasked.compiledMasks.find(m => number.indexOf(m.startsWith) === 0);
-        }
-      })
-    })
-  };
-
+    if (phoneInputs.length) {
+      phoneInputs.forEach(element => {
+        IMask(element, {
+          mask: '+{7} (000) 000-00-00',
+          lazy: false,
+          placeholderChar: '_'
+        });
+      });
+    }
+  
+    if (iinInputs.length) {
+      iinInputs.forEach(element => {
+        IMask(element, {
+          mask: '000000000000',
+          lazy: false,
+          placeholderChar: '_',  
+        });
+      });
+    }
+  }
+  
   initMask();
 
   // Открытие попапа
@@ -160,42 +155,46 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // переключение табов контента
-//   (function() {
-//     const tabs = document.querySelectorAll('.content-tab');
-//     const tabContents = document.querySelectorAll('.tab-content');     
+  (function() {
+    const tabs = document.querySelectorAll('.content-tab');
+    const tabContents = document.querySelectorAll('.tab-content');     
 
-//     function switchTab(event) {
-//       tabs.forEach(tab => tab.classList.remove('active'));
-//       event.currentTarget.classList.add('active');
+    function switchTab(event) {
+      tabs.forEach(tab => tab.classList.remove('active'));
+      event.currentTarget.classList.add('active');
 
-//       const tabValue = event.currentTarget.dataset.tab;
-//       window.location.hash = tabValue; // добавляем якорь в URL
+      const tabValue = event.currentTarget.dataset.tab;
+      // window.location.hash = tabValue; // добавляем якорь в URL
 
-//       tabContents.forEach(content => content.classList.remove('active'));
+      tabContents.forEach(content => content.classList.remove('active'));
 
-//       const targetContent = document.querySelectorAll(`.tab-content[data-content="${tabValue}"]`);
-//       targetContent.forEach((content) => {
-//         content.classList.add('active');
-//       })
-//     }
+      const targetContent = document.querySelectorAll(`.tab-content[data-content="${tabValue}"]`);
+      targetContent.forEach((content) => {
+        content.classList.add('active');
+      })
+    }
 
-//     tabs.forEach(tab => tab.addEventListener('click', switchTab));
+    tabs.forEach(tab => tab.addEventListener('click', switchTab));
 
-//     // проверяем, есть ли якорь в URL при загрузке страницы
-//     window.onload = function() {
-//       const hash = window.location.hash.substring(1); // получаем якорь без '#'
-//       if (hash) {
-//         const tabToActivate = document.querySelector(`.content-tab[data-tab="${hash}"]`);
-//         if (tabToActivate) {
-//           tabToActivate.click(); // имитируем клик по табу
-//         }
-//       }
-//     };
-// })();
+    // проверяем, есть ли якорь в URL при загрузке страницы
+    window.onload = function() {
+      const hash = window.location.hash.substring(1); // получаем якорь без '#'
+      if (hash) {
+        const tabToActivate = document.querySelector(`.content-tab[data-tab="${hash}"]`);
+        if (tabToActivate) {
+          tabToActivate.click(); // имитируем клик по табу
+        }
+      }
+    };
+})();
 
 
   // калькулятор
   $(function() {
+    if (!document.querySelector('.lang .active a')) return
+    
+    let activeLanguage = document.querySelector('.lang .active a').textContent;
+      
     var sliders = {
       zalog: {
         kzt: {
@@ -252,7 +251,12 @@ document.addEventListener('DOMContentLoaded', () => {
           $('#' + formId + ' #result-total-no-valid').text('');
           $('#' + formId + ' #result-sum-no-valid').text('');
 
-          $('#' + formId + ' #result-min').html(`Минимальная сумма кредита <span class="bold">${addSpaces(sumSettings.min)} тг</span>`);
+          // $('#' + formId + ' #result-min').html(`Минимальная сумма кредита <span class="bold">${addSpaces(sumSettings.min)} тг</span>`);
+          if (activeLanguage === 'KZ') {
+            $('#' + formId + ' #result-min').html(`Ең аз кредит сомасы <span class="bold">${addSpaces(sumSettings.min)} тг</span>`);
+          } else {
+            $('#' + formId + ' #result-min').html(`Минимальная сумма кредита <span class="bold">${addSpaces(sumSettings.min)} тг</span>`);
+          }
           $('#' + formId + ' #result-max').text('');
           // $('#' + formId + ' #result-mine').text('');
           $('#' + formId + ' #result-mine').addClass('hidden');
@@ -265,7 +269,12 @@ document.addEventListener('DOMContentLoaded', () => {
           $('#' + formId + ' #result-total-no-valid').text('');
           $('#' + formId + ' #result-sum-no-valid').text('');
 
-          $('#' + formId + ' #result-max').html(`Максимальная сумма кредита <span class="bold">${addSpaces(sumSettings.max)} тг</span>`);
+          // $('#' + formId + ' #result-max').html(`Максимальная сумма кредита <span class="bold">${addSpaces(sumSettings.max)} тг</span>`);
+          if (activeLanguage === 'KZ') {
+            $('#' + formId + ' #result-max').html(`Кредиттің максималды сомасы <span class="bold">${addSpaces(sumSettings.max)} тг</span>`);
+          } else {
+            $('#' + formId + ' #result-max').html(`Максимальная сумма кредита <span class="bold">${addSpaces(sumSettings.max)} тг</span>`);
+          }
           $('#' + formId + ' #result-min').text('');
           // $('#' + formId + ' #result-mine').text('');
           $('#' + formId + ' #result-mine').addClass('hidden');
@@ -287,16 +296,24 @@ document.addEventListener('DOMContentLoaded', () => {
           if (data.period < periodSettings.min) {
             $('#' + formId + ' #result-total-no-valid').text('');
             $('#' + formId + ' #result-sum-no-valid').text('');
-
-            $('#' + formId + ' #result-period-min').html(`Минимальный срок кредита <span class="bold">${periodSettings.min} дней</span>`);
+            
+            if (activeLanguage === 'KZ') {
+              $('#' + formId + ' #result-period-min').html(`Ең аз кредит мерзімі <span class="bold">${addSpaces(periodSettings.min)} ай</span>`);
+            } else {
+              $('#' + formId + ' #result-period-min').html(`Минимальный срок кредита <span class="bold">${periodSettings.min} месяцев</span>`);
+            }
             $('#' + formId + ' #result-period-max').html('');
             // $('#' + formId + ' #result-total').text('');
             $('#' + formId + ' #result-total').addClass('hidden');
           } else if (data.period > periodSettings.max) {
             $('#' + formId + ' #result-total-no-valid').text('');
             $('#' + formId + ' #result-sum-no-valid').text('');
-
-            $('#' + formId + ' #result-period-max').html(`Максимальный срок кредита <span class="bold">${periodSettings.max} дней</span>`);
+           
+            if (activeLanguage === 'KZ') {
+              $('#' + formId + ' #result-period-max').html(`Кредиттің максималды мерзімі <span class="bold">${addSpaces(periodSettings.max)} ай</span>`);
+            } else {
+              $('#' + formId + ' #result-period-max').html(`Максимальный срок кредита <span class="bold">${periodSettings.max} месяцев</span>`);
+            }
             $('#' + formId + ' #result-period-min').html('');
             // $('#' + formId + ' #result-total').text('');
             $('#' + formId + ' #result-total').addClass('hidden');
@@ -414,28 +431,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // раскрытие списка
   (function() {
+    if (!document.querySelector('.lang .active a')) return
+
+    let activeLanguage = document.querySelector('.lang .active a').textContent;  
+  
     const descriptionTextMains = document.querySelectorAll('.description-text-main');
     const descriptionToggleBtns = document.querySelectorAll('.description-more');
   
-    if(!descriptionTextMains || !descriptionToggleBtns) return
+    if (!descriptionTextMains || !descriptionToggleBtns) return;
   
-    descriptionToggleBtns.forEach((btn, index) => {
+    descriptionTextMains.forEach((descriptionTextMain, index) => {
+      const descriptionTextMainLong = descriptionTextMain.querySelector('.description-text-main-long');
+      const btn = descriptionToggleBtns[index];
+      const span = btn.querySelector('span');
+      const icon = btn.querySelector('.ui-btn-icon');
+  
       btn.addEventListener('click', () => {
-        const descriptionTextMain = descriptionTextMains[index];
-        descriptionTextMain.classList.toggle('show-full');
-        
-        const span = btn.querySelector('span'); // получаем элемент span
-        if (span) {
-          span.textContent = descriptionTextMain.classList.contains('show-full') ? 'Скрыть' : 'Читать подробнее';
-        }
+        descriptionTextMainLong.classList.toggle('show-full');
   
-        const icon = btn.querySelector('.ui-btn-icon'); // получаем элемент ui-btn-icon
-        if (icon) {
-          if (descriptionTextMain.classList.contains('show-full')) {
-            icon.classList.add('opened'); // добавляем класс 'opened', если список открыт
+        if (descriptionTextMainLong.classList.contains('show-full')) {
+          if (activeLanguage === 'KZ') {
+            span.textContent = 'жасыру';
           } else {
-            icon.classList.remove('opened'); // удаляем класс 'opened', если список закрыт
+            span.textContent = 'Скрыть';
           }
+          icon.classList.add('opened');
+        } else {
+          if (activeLanguage === 'KZ') {
+            span.textContent = 'Толығырақ оқу';
+          } else {
+            span.textContent = 'Читать подробнее';
+          }
+          icon.classList.remove('opened');
         }
       });
     });
