@@ -844,11 +844,11 @@
                 $(document).ready(function () {
                   $.validator.addMethod("noDigits", function(value, element) {
                     return this.optional(element) || !/\d/.test(value);
-                  }, 'В этом поле нельзя вводить цифры');               
+                  }, 'Қате толтырылған');               
 
                   $.validator.addMethod("onlyDigits", function(value, element) {
                     return this.optional(element) || /^\d+$/.test(value);
-                  }, 'В этом поле должно быть 12 символов');
+                  }, 'Қате толтырылған');
           
                   $.validator.addMethod("phone", function (value, element) {
                   if (value.startsWith('+375')) {
@@ -858,9 +858,9 @@
                   } else {
                     return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?$/i.test(value);
                   }
-                }, "Введите полный номер");   
+                }, "Қате толтырылған");   
           
-                  $.validator.messages.required = 'Пожалуйста, заполните это поле';
+                  $.validator.messages.required = 'Қате толтырылған';
           
                   $(".application-form-1").validate({
                     submitHandler: function(form, event) {
@@ -1396,11 +1396,11 @@
                 $(document).ready(function () {
                   $.validator.addMethod("noDigits", function(value, element) {
                     return this.optional(element) || !/\d/.test(value);
-                  }, 'В этом поле нельзя вводить цифры'); 
+                  }, 'Қате толтырылған'); 
 
                   $.validator.addMethod("onlyDigits", function(value, element) {
                     return this.optional(element) || /^\d+$/.test(value);
-                  }, 'В этом поле должно быть 12 символов');
+                  }, 'Қате толтырылған');
           
                   $.validator.addMethod("phone", function (value, element) {
                   if (value.startsWith('+375')) {
@@ -1410,9 +1410,9 @@
                   } else {
                     return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?$/i.test(value);
                   }
-                }, "Введите полный номер");   
+                }, "Қате толтырылған");   
           
-                  $.validator.messages.required = 'Пожалуйста, заполните это поле';
+                  $.validator.messages.required = 'Қате толтырылған';
           
                   $(".application-form-2").validate({
                     submitHandler: function(form, event) {
@@ -1945,11 +1945,11 @@
                 $(document).ready(function () {
                   $.validator.addMethod("noDigits", function(value, element) {
                     return this.optional(element) || !/\d/.test(value);
-                  }, 'В этом поле нельзя вводить цифры');
+                  }, 'Қате толтырылған');
                 
                   $.validator.addMethod("onlyDigits", function(value, element) {
                     return this.optional(element) || /^\d+$/.test(value);
-                  }, 'В этом поле должно быть 12 символов');
+                  }, 'Қате толтырылған');
           
                   $.validator.addMethod("phone", function (value, element) {
                   if (value.startsWith('+375')) {
@@ -1959,9 +1959,9 @@
                   } else {
                     return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?$/i.test(value);
                   }
-                }, "Введите полный номер");   
+                }, "Қате толтырылған");   
           
-                  $.validator.messages.required = 'Пожалуйста, заполните это поле';
+                  $.validator.messages.required = 'Қате толтырылған';
           
                   $(".application-form-3").validate({
                     submitHandler: function(form, event) {
